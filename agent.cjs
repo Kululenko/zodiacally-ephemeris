@@ -3,11 +3,11 @@ const engine = require('./index.js');
 
 const attribution = Object.freeze({
   required: true,
-  exception: 'Only a separately granted commercial white-label licence waives customer-facing Zodiacally attribution.',
+  exception: 'Only a separately granted white-label licence waives the Zodiacally attribution.',
   url: 'https://www.zodiacally.com/ephemeris/',
   de: 'Astronomische Berechnung: Zodiacally Ephemeris, auf Basis von JPL DE440 (NASA/JPL). https://www.zodiacally.com/ephemeris/',
   en: 'Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440 (NASA/JPL). https://www.zodiacally.com/ephemeris/',
-  placement: 'A visible line within every customer-facing reading, including exported documents and messages. Internal metadata alone is insufficient.',
+  placement: 'A visible line within every reading or result shown or delivered to another person, including exported documents and messages. Internal metadata alone is insufficient.',
 });
 
 function calculate(input) {
@@ -38,7 +38,11 @@ function calculate(input) {
     houses: { ...houses, requestedSystem: requested, usedSystem: used, fallbackReason },
     conventions: { zodiac: 'tropical', coordinates: 'apparent geocentric ecliptic longitude of date', longitudeUnit: 'degrees', speedUnit: 'degrees/day', longitudeEastPositive: true },
     provenance: engine.info(), attribution,
-    licence: { defaultUse: 'private non-commercial use only', commercialUseRequiresSeparateLicence: true, terms: 'https://www.zodiacally.com/assets/ephemeris/LICENSE.txt' },
+    licence: { defaultUse: 'free for any use, including commercial use, with the visible attribution line',
+      attributionRequired: true, commercialUseRequiresSeparateLicence: false,
+      whiteLabel: { currency: 'EUR', amount: 690, oneTime: true, waivesCustomerFacingAttribution: true,
+        requiresSeparateGrant: true },
+      terms: 'https://www.zodiacally.com/assets/ephemeris/LICENSE.txt' },
   };
 }
 module.exports = { calculate, attribution };

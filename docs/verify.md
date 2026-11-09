@@ -9,13 +9,14 @@ We will link independent reports here as they arrive; there are none yet.
 
 ```sh
 git clone https://github.com/Kululenko/zodiacally-ephemeris.git && cd zodiacally-ephemeris
-npm ci && npm test        # 137 tests: data checksums, NASA/JPL Horizons values, time, houses, CLI
+npm ci && npm test        # 139 tests: data checksums, NASA/JPL Horizons values, time, houses, CLI
 node -e "console.log(require('./').info())"
 ```
 
 `info().manifestSha256` must be `dc4569769900b60381b5bbcd74efdae06713d1a14bbe4e84371b319477219c35`
-for version 1.1.0. The manifest lists the size and SHA-256 of every table, and the engine refuses
-to compute (`EPHEMERIS_DATA_INVALID`) if a table does not match it.
+for versions 1.1.0 and 1.1.1, which share the same data. The manifest lists the size and SHA-256
+of every table, and the engine refuses to compute (`EPHEMERIS_DATA_INVALID`) if a table does not
+match it.
 
 ## 2. Positions match NASA/JPL Horizons (2 minutes)
 

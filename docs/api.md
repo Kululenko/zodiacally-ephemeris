@@ -136,6 +136,34 @@ A polar Placidus request returns whole-sign houses with `usedSystem: 'W'` and
 `code`; errors from the engine keep their codes, so a date outside the coverage throws
 `EPHEMERIS_RANGE` or `EPHEMERIS_TIME_OUT_OF_RANGE`.
 
+`attribution` (also exported as `require('zodiacally-ephemeris/agent').attribution`) holds the
+line that every reading or result shown or delivered to another person must show under the
+licence, in the language of that reading: `en` and `de` (the line in English and German), `url`
+(the link target for "Zodiacally Ephemeris"), `required`, `exception` and `placement`. In short
+formats where a full line is impractical, such as push notifications or voice output, a clearly
+labelled credit reachable from the output is enough (see [LICENSE.txt](../LICENSE.txt),
+section 3). `licence` states the terms in machine-readable form (since 1.1.1):
+
+```js
+licence: {
+  defaultUse: 'free for any use, including commercial use, with the visible attribution line',
+  attributionRequired: true,
+  commercialUseRequiresSeparateLicence: false,
+  whiteLabel: {
+    currency: 'EUR', amount: 690, oneTime: true,
+    waivesCustomerFacingAttribution: true, requiresSeparateGrant: true,
+  },
+  terms: 'https://www.zodiacally.com/assets/ephemeris/LICENSE.txt',
+}
+```
+
+Both objects are the same for every call and every user. `amount` is the one-time fee in euros,
+plus VAT where applicable. `whiteLabel` describes the offer, not a grant: the wrapper cannot tell
+whether a white-label licence has been granted to you, so show the attribution unless you hold
+one. If you pass the results on through an API, include the attribution in your response and
+require the recipients to display it. See [AGENTS.md](../AGENTS.md) and
+[LICENSE.txt](../LICENSE.txt).
+
 The CLI is installed with the package (the npm release is pending; until then install with
 `npm install github:Kululenko/zodiacally-ephemeris`). Run it from your project after installing:
 

@@ -180,10 +180,10 @@ with the generated `README.md`, especially if your numbers differ from ours.
 ## Licences
 
 The scripts in this directory, including `studies/`, are MIT-licensed (see `LICENSE`).
-Zodiacally Ephemeris itself is source-available, not open source; see
-[`../LICENSE.txt`](../LICENSE.txt). `npm install` fetches `sweph` (AGPL-3.0 / LGPL-3.0), and
-`fetch-swiss-data.mjs` downloads the Swiss Ephemeris data files together with their licence file.
-The Swiss Ephemeris is available under AGPL-3.0 or the Swiss Ephemeris Professional License (see
-[astro.com/swisseph](https://www.astro.com/swisseph/) for current terms). `sweph` and the data
-files stay in this directory, are git-ignored and are never part of the `zodiacally-ephemeris`
-package. NASA/JPL data are public domain.
+Zodiacally Ephemeris itself is source-available and free to use, also commercially, with
+attribution, but it is not open source; see [`../LICENSE.txt`](../LICENSE.txt). `npm install`
+fetches `sweph` (AGPL-3.0 / LGPL-3.0), and `fetch-swiss-data.mjs` downloads the Swiss Ephemeris
+data files together with their licence file. The Swiss Ephemeris is available under AGPL-3.0 or
+the Swiss Ephemeris Professional License (see [astro.com/swisseph](https://www.astro.com/swisseph/)
+for current terms). `sweph` and the data files stay in this directory, are git-ignored and are
+never part of the `zodiacally-ephemeris` package. NASA/JPL data are public domain.

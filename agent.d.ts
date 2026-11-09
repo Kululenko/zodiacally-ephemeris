@@ -21,6 +21,25 @@ export interface Attribution {
   placement: string;
 }
 
+export interface WhiteLabelLicence {
+  currency: 'EUR';
+  /** One-time licence fee in EUR, plus VAT where applicable. */
+  amount: number;
+  oneTime: true;
+  /** Waives the attribution in readings or results shown or delivered to another person. */
+  waivesCustomerFacingAttribution: true;
+  /** Granted individually by Zodiacally on request; entering a licence tier in software does not grant it. */
+  requiresSeparateGrant: true;
+}
+
+export interface Licence {
+  defaultUse: string;
+  attributionRequired: true;
+  commercialUseRequiresSeparateLicence: false;
+  whiteLabel: WhiteLabelLicence;
+  terms: string;
+}
+
 export interface AgentResult {
   schema: 'zodiacally-ephemeris-agent.v1';
   utc: string;
@@ -29,7 +48,7 @@ export interface AgentResult {
   conventions: Record<string, string | boolean>;
   provenance: EngineInfo;
   attribution: Attribution;
-  licence: { defaultUse: string; commercialUseRequiresSeparateLicence: true; terms: string };
+  licence: Licence;
 }
 
 export declare const attribution: Attribution;

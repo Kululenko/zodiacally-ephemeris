@@ -1,7 +1,8 @@
 # Zodiacally Ephemeris: a table-driven JPL DE440 ephemeris for astrological software, and its validation against the Swiss Ephemeris and NASA/JPL Horizons
 
-Technical note, version 1.1.0, 9 November 2026 (benchmark run of 8 November 2026). Zodiacally
-(https://www.zodiacally.com). Repository: https://github.com/Kululenko/zodiacally-ephemeris
+Technical note, version 1.1.1, 9 November 2026 (benchmark run of 8 November 2026 with version
+1.1.0; calculations and data are unchanged in 1.1.1). Zodiacally (https://www.zodiacally.com).
+Repository: https://github.com/Kululenko/zodiacally-ephemeris
 
 ## Abstract
 
@@ -261,13 +262,21 @@ statement about the validity of astrological interpretation.
 ## 9. Availability
 
 Source and data: https://github.com/Kululenko/zodiacally-ephemeris (public repository since
-9 November 2026). The engine is source-available, not open source. It is free only for private,
-personal, non-commercial use, not for businesses, client work, paid readings or public services,
-even free ones; free use also requires the attribution line in every generated reading.
-Commercial licences are one-time and perpetual for the licensed version: €500
-with visible attribution in every customer-facing reading, or €2,000 white-label; contact
-support@zodiacally.com. The binding terms are in [LICENSE.txt](../LICENSE.txt). Used by
-Zodiacally since October 2026.
+9 November 2026). The engine is source-available and free to use, also commercially, with
+attribution. Every reading or result produced with it that is shown or delivered to another
+person must show the attribution line in the language of that reading, in English
+"Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440 (NASA/JPL).
+https://www.zodiacally.com/ephemeris/" (the German version is given in
+[LICENSE.txt](../LICENSE.txt)); in short formats such as push notifications or voice output, a
+clearly labelled credit reachable from the output is enough. The engine may be distributed as
+part of the distributor's own application or service, but not published or distributed as a
+standalone library, package, port or ephemeris data product. A white-label licence without
+attribution costs €690 one-time plus VAT where applicable; it is granted individually on
+request (support@zodiacally.com) and covers the licensee's own products and client projects for
+the version current at purchase and every release published within 12 months after it. The
+licence is not an OSI open-source licence, because it requires the attribution and restricts
+standalone distribution. The binding terms (version 2, 9 November 2026) are in
+[LICENSE.txt](../LICENSE.txt). Used by Zodiacally since October 2026.
 
 The benchmark scripts in `benchmark/` are MIT-licensed. `sweph` (AGPL-3.0/LGPL-3.0) and the Swiss
 Ephemeris data files are installed or downloaded separately and are never distributed with the

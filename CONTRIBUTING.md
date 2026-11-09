@@ -11,8 +11,11 @@ whether it confirms or contradicts our numbers.
 - **Benchmark improvements** (fairer comparisons, more machines, other libraries) are welcome as
   pull requests to `benchmark/` (MIT-licensed).
 - **Engine and data:** the engine is source-available under [LICENSE.txt](LICENSE.txt), not open
-  source. Pull requests to the engine are welcome for discussion, but we can only merge them if
-  you agree that Zodiacally may distribute your change under that licence; please say so in the PR.
+  source. Forking this repository to propose changes is permitted. Pull requests to the engine
+  are welcome for discussion, but we can only merge them if you grant Zodiacally a perpetual,
+  worldwide, non-exclusive, irrevocable, royalty-free right to use, modify and distribute your
+  contribution under any licence terms, including white-label licences, and confirm that you
+  have the right to do so; please say so in the PR.
 - **Clean room:** do not submit code or data derived from the Swiss Ephemeris source code or other
   GPL/AGPL-licensed ephemeris code. Comparisons through public APIs, as in `benchmark/`, are fine.
   If a change chooses between published conventions by comparing residuals against another

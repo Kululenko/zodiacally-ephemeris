@@ -35,7 +35,7 @@ well; see [Licensing](#licensing).
 
 ## Features
 
-| | Zodiacally Ephemeris 1.1.0 | Swiss Ephemeris 2.10 |
+| | Zodiacally Ephemeris 1.1.1 | Swiss Ephemeris 2.10 |
 | --- | --- | --- |
 | Planetary data | JPL DE440, via its subset DE440s | default SE1 files built from JPL DE441; can also read JPL files such as DE440 directly |
 | Chiron | JPL orbit solution JPL#171, the one JPL Horizons serves | asteroid file `seas_18.se1`, based on a different orbit solution |
@@ -46,7 +46,7 @@ well; see [Licensing](#licensing).
 | Other functions | UTC ↔ TT/UT1 with leap seconds, ΔT | eclipses, rise and set, heliacal events, crossings and more |
 | Languages | JavaScript for Node.js ≥ 22.12 (CommonJS and ES modules, TypeScript types); reads its data with `fs`, so not in a browser | C library with bindings for many languages |
 | Deployment | no native code; 8 MB of data inside the package, SHA-256 verified on first use | native code (in Node.js through an addon such as `sweph`); the SE1 files must be deployed and their path set, otherwise it falls back to its built-in, less precise Moshier ephemeris |
-| Licence | source-available, not open source; see [Licensing](#licensing) | AGPL-3.0 or the Swiss Ephemeris Professional License |
+| Licence | source-available, not open source: free for any use, including commercial, with the attribution line in every reading or result shown or delivered to others; white-label without attribution €690 one-time plus VAT where applicable; see [Licensing](#licensing) | AGPL-3.0 or the Swiss Ephemeris Professional License |
 
 **About the data.** Zodiacally Ephemeris is built on DE440, the JPL ephemeris recommended for
 modern dates; the Swiss Ephemeris' current files are built from the long-span companion DE441.
@@ -307,12 +307,20 @@ they are maxima unless marked as means.
 
 ## Licensing
 
-Zodiacally Ephemeris is source-available, not open source. It is free only for private, personal,
-non-commercial use, not for businesses, client work, paid readings or public services, even free
-ones; free use also requires the attribution line in every generated reading. Commercial use
-needs a separately granted one-time licence: €500 with a visible attribution line in every
-customer-facing reading, or €2,000 for white-label use without it. Both are perpetual for the
-licensed version; contact support@zodiacally.com. The terms are in [LICENSE.txt](../LICENSE.txt).
+Zodiacally Ephemeris is source-available and free to use, also commercially, with attribution.
+Businesses, client work, paid readings, public services, apps and agents may use it free of
+charge. The conditions are the attribution line given in [LICENSE.txt](../LICENSE.txt), in every
+reading or result shown or delivered to another person (in short formats such as push
+notifications or voice output, a clearly labelled credit reachable from the output is enough;
+results passed on through an API must carry the line too), and the distribution rules: the
+engine may be distributed as part of the distributor's own application or service, but not
+published or distributed as a standalone library, package, port or ephemeris data product. Use
+without the attribution needs a white-label licence: €690 one-time plus VAT where applicable,
+granted individually on request (support@zodiacally.com), for the licensee's own products and
+client projects and for the version current at purchase and every release published within
+12 months after it. It is not an OSI open-source licence, because the attribution is required
+and standalone distribution is restricted. The binding terms are in
+[LICENSE.txt](../LICENSE.txt).
 
 The Swiss Ephemeris is available under AGPL-3.0 or the Swiss Ephemeris Professional License; see
 [astro.com/swisseph](https://www.astro.com/swisseph/) for the current terms.

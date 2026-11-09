@@ -38,7 +38,7 @@ Used by [Zodiacally](https://www.zodiacally.com) since October 2026.
 | Output per call | ecliptic longitude of date and its speed | longitude, latitude, distance and their speeds |
 | Scope | Sun, Moon, Mercury–Pluto, Chiron, true node; Placidus and whole sign; 1899–2101 | many more bodies, points, frames and house systems; a date range of thousands of years |
 | Runtime | Node.js ≥ 22.12 with file access (not in a browser); pure JavaScript, no dependencies, data bundled | native addon; data files downloaded separately |
-| Licence | source-available, not open source: free only for private, personal, non-commercial use (not for businesses, client work, paid readings or public services, even free ones); commercial €500 or €2,000 one-time | AGPL-3.0 or the Swiss Ephemeris Professional License (see [astro.com/swisseph](https://www.astro.com/swisseph/) for current terms) |
+| Licence | source-available, not open source: free for any use, including commercial, with the attribution line in every reading or result shown or delivered to others; white-label licence without attribution €690 one-time plus VAT where applicable (see [Licence](#licence)) | AGPL-3.0 or the Swiss Ephemeris Professional License (see [astro.com/swisseph](https://www.astro.com/swisseph/) for current terms) |
 
 **Speed.** Measured on 8 November 2026 on an Apple M1 (macOS, Node v25.8.2) against Swiss
 Ephemeris 2.10.03 through `sweph` 2.10.3-7: median of 7 alternating rounds, warm, single thread,
@@ -50,7 +50,9 @@ therefore about 14–24× faster per chart in Node.js. It starts more slowly: lo
 and computing the first chart in a fresh process (Node.js start-up excluded) takes 19.2 ms vs
 10.4 ms, because it loads Node's crypto module and reads and verifies the SHA-256 of its 8 MB of
 tables on first use. Counting start-up, it is ahead in total time only after about 124 charts in
-one process.
+one process. These measurements were made with version 1.1.0; version 1.1.1 changes only the
+licence terms, the agent wrapper's licence and attribution texts and the command-line help text,
+so its calculations and data are identical.
 
 The comparison is not like for like. Zodiacally Ephemeris evaluates precomputed apparent
 longitudes, while the Swiss Ephemeris computes positions, including latitude, distance and their
@@ -302,18 +304,57 @@ published in [benchmark/studies/](benchmark/studies/).
 
 ## Licence
 
-Zodiacally Ephemeris is **source-available, not open source**. [LICENSE.txt](LICENSE.txt) holds
-the binding terms; in short:
+Zodiacally Ephemeris is **source-available and free to use, also commercially, with
+attribution**. It is not under an OSI open-source licence: readings and results shown or
+delivered to others must carry the attribution line, and the engine may not be published or
+distributed as a standalone library. [LICENSE.txt](LICENSE.txt) holds the binding terms
+(version 2, 9 November 2026); in short:
 
-- **Free only for private, personal, non-commercial use** — not for businesses, client work, paid
-  readings or public services, even free ones; free use also requires the attribution line below
-  in every generated reading.
-- **Standard commercial licence: €500 one-time**, with visible attribution in every
-  customer-facing reading: *"Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440
-  (NASA/JPL). https://www.zodiacally.com/ephemeris/"*
-- **White-label commercial licence: €2,000 one-time**, without the customer-facing attribution.
-- Commercial licences are perpetual for the licensed version. Contact:
-  [support@zodiacally.com](mailto:support@zodiacally.com).
+- **Free for any use, including commercial**: businesses, client work, paid readings, public
+  services, apps, agents and APIs. The permission is worldwide and non-exclusive. No
+  registration, separate agreement or licence fee is needed; by using, copying or distributing
+  the engine you accept the terms.
+- **Two conditions: the attribution and the distribution rules.** If you do not meet them, your
+  rights end automatically; they are restored if you remedy the breach within 30 days of
+  becoming aware of it or of being notified by Zodiacally. Apart from that, the permission is
+  irrevocable for every copy you have received.
+- **The attribution line** appears visibly in every reading or result produced with the engine that
+  is shown or delivered to another person, whether or not that person pays, in the language of that
+  reading:
+  *"Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440 (NASA/JPL).
+  https://www.zodiacally.com/ephemeris/"*
+  (German: *"Astronomische Berechnung: Zodiacally Ephemeris, auf Basis von JPL DE440
+  (NASA/JPL). https://www.zodiacally.com/ephemeris/"*). A readable line at the end of the reading is
+  enough; link "Zodiacally Ephemeris" where links are supported, and keep the line in exported PDFs,
+  reports, emails and chat answers. In short formats where a full line is impractical, such as push
+  notifications, widgets, social media posts, calendar entries or voice output, a clearly labelled
+  credit reachable from the output (for example a linked caption or a credits page linked from it)
+  is enough. A hidden metadata field, internal log, system prompt or general legal notice alone is
+  not. If you use agents or other tools, make sure the line reaches the final output. If you provide
+  results to others through an API, include the line in the response and require the recipients to
+  display it. Results you use only yourself need no attribution.
+- **Distribution:** you may distribute the engine as part of your own application or service,
+  together with LICENSE.txt and the source and data notices. Recipients receive it under these
+  terms, including the attribution requirement, which you cannot waive for them. The engine or
+  an adaptation of it may not be published, distributed, sold, rented or sublicensed as a
+  standalone library, package, port or ephemeris data product, whether free of charge or for a
+  fee. Forks of this repository for proposing changes are permitted.
+- **White-label licence without attribution: €690 one-time, plus VAT where applicable**, granted
+  individually on request ([support@zodiacally.com](mailto:support@zodiacally.com)). It covers
+  the licensee (one person or legal entity) with all of its own products and services and the
+  client projects it builds, for the version current at purchase and every release published
+  within 12 months after the purchase, and it is perpetual for those releases. All other terms
+  still apply. It does not promise hosting, support, maintenance or future releases; their
+  provision, if any, is agreed separately. Downloading the package or entering a licence tier in
+  software grants no white-label licence.
+- **Warranty and liability:** free use is provided "as is", without warranty to the extent permitted
+  by law, and Zodiacally is liable only for intent and gross negligence. For a white-label licence
+  the statutory rules apply unless the individual agreement provides otherwise. Mandatory statutory
+  liability remains unaffected in both cases.
+
+Version 2 applies to every copy of the engine, including copies obtained under version 1 of
+4 November 2026. Holders of a commercial licence granted under version 1 may rely on that
+licence or on version 2, whichever they choose (see [CHANGELOG.md](CHANGELOG.md)).
 
 [LICENSE.txt](LICENSE.txt) covers everything in this repository except `benchmark/` (MIT, see
 [benchmark/LICENSE](benchmark/LICENSE)) and the third-party data and tools listed in
