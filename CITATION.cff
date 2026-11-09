@@ -7,13 +7,15 @@ abstract: >-
   true lunar node for 1899-2101, built from NASA/JPL DE440s and, for Chiron, the JPL Horizons
   orbit solution JPL#171, with IAU 2006 sidereal time and Placidus and whole-sign houses.
   Compared with the Swiss Ephemeris and NASA/JPL Horizons in a reproducible benchmark.
-  Source-available, not open source; see the licence.
+  Source-available and free to use, also commercially, with attribution; not an OSI open-source
+  licence (attribution in readings shown to others, no distribution as a standalone library).
+  See the licence.
 type: software
 authors:
   - name: "Zodiacally"
     website: "https://www.zodiacally.com"
-version: "1.1.0"
-date-released: "2026-11-04"
+version: "1.1.1"
+date-released: "2026-11-09"
 repository-code: "https://github.com/Kululenko/zodiacally-ephemeris"
 url: "https://www.zodiacally.com/ephemeris/"
 license-url: "https://github.com/Kululenko/zodiacally-ephemeris/blob/main/LICENSE.txt"

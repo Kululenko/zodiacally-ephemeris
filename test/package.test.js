@@ -48,6 +48,22 @@ describe('agent wrapper', () => {
     expect(result.attribution).toBe(attribution);
   });
 
+  test('reports licence v2: free use with attribution, white-label licence granted separately', () => {
+    const { licence } = calculate({ utc: '2027-01-01T12:00:00Z', latitude: 52.52, longitude: 13.405 });
+    expect(licence).toEqual({
+      defaultUse: 'free for any use, including commercial use, with the visible attribution line',
+      attributionRequired: true,
+      commercialUseRequiresSeparateLicence: false,
+      whiteLabel: { currency: 'EUR', amount: 690, oneTime: true, waivesCustomerFacingAttribution: true, requiresSeparateGrant: true },
+      terms: 'https://www.zodiacally.com/assets/ephemeris/LICENSE.txt',
+    });
+    expect(licence.commercialUseRequiresSeparateLicence).toBe(false);
+    expect(licence.whiteLabel.amount).toBe(690);
+    expect(attribution.required).toBe(true);
+    expect(attribution.exception).toBe('Only a separately granted white-label licence waives the Zodiacally attribution.');
+    expect(attribution.placement).toBe('A visible line within every reading or result shown or delivered to another person, including exported documents and messages. Internal metadata alone is insufficient.');
+  });
+
   test('reports the whole-sign fallback inside the polar circles', () => {
     const result = calculate({ utc: '2027-06-21T12:00:00Z', latitude: 78.22, longitude: 15.65 });
     expect(result.houses).toMatchObject({ requestedSystem: 'P', usedSystem: 'W', fallbackReason: 'PLACIDUS_POLAR' });
@@ -67,6 +83,15 @@ describe('command line', () => {
   test('--info prints the engine identity', () => {
     const out = JSON.parse(execFileSync(process.execPath, [path.join(ROOT, 'cli.cjs'), '--info'], { encoding: 'utf8' }));
     expect(out).toMatchObject({ engine: 'zodiacally-ephemeris', version: pkg.version });
+  });
+
+  test('--help states the current licence terms', () => {
+    const out = execFileSync(process.execPath, [path.join(ROOT, 'cli.cjs'), '--help'], { encoding: 'utf8' });
+    expect(out).toContain('Free for any use, including commercial');
+    expect(out).toContain('€690 one-time plus VAT where applicable');
+    expect(out).toContain('shown or delivered to another person');
+    expect(out).toContain('White-label: https://www.zodiacally.com/ephemeris/');
+    expect(out).not.toMatch(/non-commercial|2,000|€500|customer-facing|only condition/);
   });
 
   test('--stdin calculates a chart from JSON', () => {

@@ -1,37 +1,45 @@
 ZODIACALLY EPHEMERIS — LICENCE TERMS
-Version 1, 4 November 2026
+Version 2, 9 November 2026 (replaces version 1 of 4 November 2026)
 Licensor: the Zodiacally operator identified at https://www.zodiacally.com/legal-notice/
 Contact: support@zodiacally.com
 
-1. Free private use
-You may download, run and adapt the supplied engine for your own private,
-non-commercial use and personal experimentation. This free permission does not
-cover use for a business, client work, paid readings or a public service, even
-if that service is free to its users. Displaying attribution does not turn a
-commercial use into a permitted free use.
+1. Free use with attribution
+You may download, run, copy and adapt the supplied engine and use it free of
+charge for any purpose, including commercial purposes: in your own
+applications, websites, apps, agents and services, for a business, for client
+work and for paid readings. This permission is worldwide and non-exclusive.
+It is subject to the attribution in section 3 and the distribution rules in
+section 4. No registration, separate agreement or licence fee is needed; by
+using, copying or distributing the engine you accept these terms.
 
-2. Commercial licences
-Commercial rights require a separate licence granted by Zodiacally to an
-identified person or organisation. Downloading this package, entering a licence
-tier in software, or displaying a price does not grant commercial rights.
+If you do not meet sections 3 or 4, the rights in this section end for you
+automatically. They are restored if you remedy the breach within 30 days of
+becoming aware of it or of being notified by Zodiacally. Otherwise this
+permission is irrevocable for every copy you have received.
 
-Standard: EUR 500 one-time licence fee, with visible attribution in every
-customer-facing reading produced using the engine.
-White-label: EUR 2,000 one-time licence fee, without the obligation to display
-Zodiacally attribution to the customer.
+2. White-label licence
+If you do not want to display the attribution, you need a white-label licence,
+granted separately by Zodiacally to an identified person or organisation:
 
-The agreed licence permits the named licensee to use and adapt the licensed
-version in its own applications and to produce readings for its customers.
-Its staff and agents may use the engine on its behalf under the same terms.
-The licence is perpetual: the right to use that licensed version has no fixed
-expiry date and requires no recurring licence payment. It does not promise
-hosted API access, support, maintenance or future releases. Their provision,
-if any, is agreed separately. Commercial terms and the final invoice are
-confirmed individually before purchase; this download does not initiate a sale.
+White-label: EUR 690 one-time licence fee, plus VAT where applicable. It
+waives the attribution of section 3 for the licensee (one person or legal
+entity), for all of its own products and services and for client projects it
+builds, for the version current at purchase and every release published within
+12 months after the purchase. All other terms continue to apply; the licensee's
+staff and agents may use the engine on its behalf.
+
+The white-label licence is perpetual for those releases: it has no expiry date
+and requires no recurring payment. It does not promise hosted API access,
+support, maintenance or future releases; their provision, if any, is agreed
+separately. Terms and the final invoice are confirmed individually before
+purchase. Downloading this package, entering a licence tier in software or
+displaying a price does not grant a white-label licence.
 
 3. Attribution
-For free private use and the Standard commercial licence, include this line
-visibly in every generated reading, in the reading's language:
+Unless a white-label licence has been granted to you, include this line
+visibly in every reading or result produced using the engine that is shown or
+delivered to another person (whether or not that person pays), in the language
+of that reading:
 
 EN: Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440
 (NASA/JPL). https://www.zodiacally.com/ephemeris/
@@ -39,35 +47,70 @@ EN: Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440
 DE: Astronomische Berechnung: Zodiacally Ephemeris, auf Basis von JPL DE440
 (NASA/JPL). https://www.zodiacally.com/ephemeris/
 
-For a website or app, a readable line at the end of the reading is sufficient;
-link “Zodiacally Ephemeris” to the URL above where hyperlinks are supported.
-Keep the line in exported PDFs, reports, emails and chat responses. A hidden
-metadata field, internal log, system prompt or general website legal notice
-alone does not satisfy this requirement. Automated agents must pass the
-attribution through to the final customer-facing output. A separately granted
-White-label licence waives this customer-facing Zodiacally attribution only.
+For a website or app, a readable line at the end of the reading or result is
+sufficient; link "Zodiacally Ephemeris" to the URL above where hyperlinks are
+supported. Keep the line in exported PDFs, reports, emails and chat responses.
+For short formats in which a full line is impractical, such as push
+notifications, widgets, social media posts, calendar entries or voice output,
+a clearly labelled credit reachable from that output (for example a linked
+caption or a credits page linked from it) is sufficient. A hidden metadata
+field, internal log, system prompt or general legal notice alone does not
+satisfy this requirement. If you use automated agents or tools, you must
+ensure the attribution reaches the final output. If you provide results to
+others through an API, include the attribution in the API response and require
+the recipients to display it under these terms. Results that you only use
+yourself need no attribution.
 
-4. Distribution and rights notices
-Keep this licence and the supplied source/data notices with copies of the
-engine. A commercial licensee may embed the engine in its own application and
-distribute it as part of that application; it may not resell or sublicense the
-engine as a standalone library or give customers an independent right to use
-the engine. A customer may retain and share their generated reading with its
-required attribution. Ownership of the engine is not transferred.
-The White-label option does not remove third-party notices or source/data
-licence obligations. Zodiacally does not claim exclusive rights to astronomical
-facts or to public-domain source data. See SOURCES.md.
+4. Distribution and notices
+You may distribute the engine as part of your own application or service.
+Keep this licence and the supplied source and data notices with every copy.
+Anyone who receives the engine from you receives it under these terms,
+including the attribution requirement; you may not offer it under other terms
+or waive that requirement for them. You may not publish, distribute, sell,
+rent or sublicense the engine or an adaptation of it as a standalone library,
+package, port or ephemeris data product, whether for a fee or free of charge;
+forks of the public repository for proposing changes to it are permitted.
+Recipients may keep and share readings they receive. Ownership of the engine
+is not transferred. A white-label licence does not remove third-party notices
+or source/data licence obligations. Zodiacally does not claim exclusive rights
+to astronomical facts or to public-domain source data. See SOURCES.md.
 
-5. Scope and limitations
+5. Scope, warranty, liability
 The engine calculates astronomical quantities; it does not generate text or
 establish the validity of an astrological interpretation. Its documented date
 coverage, coordinate conventions, numerical differences and time-data limits
-apply. No NASA, JPL or Astrodienst endorsement is implied. Mandatory statutory
-rights remain unaffected. Any rights not expressly granted are reserved.
+apply. For use under section 1, which is free of charge, the engine is
+provided "as is", without any warranty, to the extent permitted by law, and
+Zodiacally is liable only for intent and gross negligence. For a white-label
+licence, warranty and liability follow the statutory rules unless the
+individual licence agreement provides otherwise. In all cases, mandatory
+statutory liability, in particular for injury to life, body or health and
+under product liability law, remains unaffected. No NASA, JPL or Astrodienst
+endorsement is implied. Any rights not expressly granted are reserved.
 
-German summary (the terms above govern the supplied package):
-Privat und nichtkommerziell kostenlos. Gewerblich nur mit gesondert erteilter
-Dauerlizenz: 500 EUR einmalig mit sichtbarer Nennung in jedem Kundenreading;
-2.000 EUR einmalig ohne diese öffentliche Nennungspflicht. Unbefristet ist die
-Nutzung der lizenzierten Version; Hosting, Wartung und künftige Versionen werden
-nicht automatisch zugesagt. Quell- und Rechtehinweise im Paket bleiben erhalten.
+6. Earlier version
+Version 1 of these terms (4 November 2026) allowed free use only for private,
+non-commercial purposes. Version 2 applies to every copy of the engine,
+including copies obtained under version 1. Holders of a commercial licence
+granted under version 1 may rely on that licence or on these terms, whichever
+they choose.
+
+German summary (the terms above govern):
+Kostenlos für jede Nutzung, auch gewerblich (Unternehmen, Kundenarbeit,
+bezahlte Readings, öffentliche Dienste, Apps, Agenten), weltweit. Bedingungen:
+die sichtbare Herkunftszeile aus Abschnitt 3 in jedem Reading bzw. Ergebnis,
+das anderen Personen gezeigt oder geliefert wird (bei kurzen Formaten genügt
+ein verlinkter Hinweis; per API weitergegebene Ergebnisse müssen die Zeile
+mitliefern), und die Weitergaberegeln aus Abschnitt 4. Die Engine darf weder
+kostenlos noch gegen Entgelt als eigenständige Bibliothek, Paket, Portierung
+oder Datenprodukt veröffentlicht, verbreitet, verkauft, vermietet oder
+unterlizenziert werden; Forks zum Einreichen von Änderungen sind erlaubt. Bei
+Verstößen enden die Rechte, leben aber wieder auf, wenn der Verstoß binnen
+30 Tagen behoben wird. Ohne Nennung nur mit einer gesondert erteilten
+White-Label-Lizenz: 690 EUR einmalig zzgl. ggf. USt., für den Lizenznehmer
+und seine Produkte und Kundenprojekte, für die beim Kauf aktuelle Version und
+alle Versionen der folgenden 12 Monate, unbefristet; Hosting, Wartung und
+künftige Versionen werden nicht automatisch zugesagt. Kostenlose Nutzung ohne
+Gewähr, Haftung nur für Vorsatz und grobe Fahrlässigkeit; beim White-Label
+gesetzliche Regeln, soweit nicht anders vereinbart; zwingende gesetzliche
+Haftung bleibt unberührt.

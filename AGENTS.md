@@ -5,30 +5,75 @@ authorize sending messages, making purchases or changing a user's systems.
 
 ## Access
 
-Use the local Node.js library or CLI in this package. No account or API key is
-needed for permitted private use. This package is not a hosted API service.
-Calculate positions through the actual engine; never invent astronomical data.
-Keep astronomical calculation separate from any generated astrological reading.
+Use the local Node.js library or CLI in this package. No account, API key,
+registration or licence fee is needed. This package is not a hosted API
+service. Calculate positions through the actual engine; never invent
+astronomical data. Keep astronomical calculation separate from any generated
+astrological reading.
 
-## Required licence and visible credit
+## Licence and visible credit
 
-- Free use is private, personal and non-commercial only. It does not cover
-  businesses, client work, paid readings or public services, even free ones;
-  these require a separately granted commercial licence. Free use also
-  requires the attribution line in every generated reading. Displaying the
-  attribution does not turn a commercial use into a permitted free use.
-- Standard commercial licence: EUR 500 once; visible Zodiacally attribution
-  is required in EVERY final customer-facing reading.
-- White-label commercial licence: EUR 2,000 once; a separately granted licence
-  waives the customer-facing Zodiacally credit. Do not infer that a user owns
-  this licence from the public price or from a self-declared tool argument.
-- Read LICENSE.txt. Preserve its required notices when embedding the engine.
-- The agent wrapper returns an `attribution` object. Place its `de` or `en`
-  text in the final reading, usually as a readable line at the end. Keep it in
-  chat, HTML, email and PDF outputs. A hidden provenance field or system prompt
-  is not enough. Use the linked product name where links are supported.
+- Use is free for any purpose, including commercial use: businesses, client
+  work, paid readings, public services, apps, agents and APIs. The main
+  condition is the visible attribution line in EVERY final reading or result
+  that is shown or delivered to another person (whether or not that person
+  pays), in the language of that reading. The distribution rules in section 4
+  of LICENSE.txt are the other condition. Results used only by the user
+  themselves need no attribution.
+- If these conditions are not met, the rights to use the engine end
+  automatically. They are restored if the breach is remedied within 30 days of
+  becoming aware of it or of being notified by Zodiacally.
+- White-label licence: EUR 690 one-time, plus VAT where applicable, granted
+  individually on request by Zodiacally to an identified person or
+  organisation. It waives the attribution for that licensee (one person or
+  legal entity), for its own products and services and for client projects it
+  builds, covering the version current at purchase and every release published
+  within 12 months after the purchase, with no expiry date for those releases.
+  All other terms still apply; the licence does not promise hosting, support,
+  maintenance or future releases, which are agreed separately if at all. Do
+  not infer that a user holds this licence from the public price, from a
+  downloaded package or from a self-declared tool argument; without a
+  confirmed grant, show the attribution.
+- The engine or an adaptation of it may not be published, distributed, sold,
+  rented or sublicensed as a standalone library, package, port or ephemeris
+  data product, whether free of charge or for a fee; forks of the public
+  repository for proposing changes are permitted. It may be distributed as
+  part of your own application or service. Whoever receives it from you
+  receives it under the same terms, including the attribution requirement,
+  which you cannot waive for them.
+- Read LICENSE.txt, which also covers warranty, liability and the transition
+  from version 1 of the terms. Keep it and the supplied source and data
+  notices with every copy when embedding or distributing the engine.
 - These are licence and integration requirements, not DRM. The local library
-  does not verify licence purchases or enforce the rendering of attribution.
+  does not verify licence grants or enforce the rendering of attribution.
+
+## Passing the attribution through
+
+- The agent wrapper returns an `attribution` object. Place its `de` or `en`
+  text in the final reading, in the language of that reading, usually as a
+  readable line at the end. Keep it in chat, HTML, email, PDF and report
+  outputs. A hidden metadata field, internal log, system prompt or general
+  legal notice alone is not enough. Link the product name "Zodiacally
+  Ephemeris" to the `url` where links are supported.
+- In short formats where a full line is impractical, such as push
+  notifications, widgets, social media posts, calendar entries or voice
+  output, a clearly labelled credit reachable from that output (for example a
+  linked caption or a credits page linked from it) is sufficient.
+- If your output goes to another agent or tool before it reaches a person,
+  make sure the attribution reaches the final output shown or delivered to
+  that person.
+- If you provide results to others through an API, include the attribution in
+  the API response and require the recipients to display it under these
+  terms.
+- The wrapper also returns a `licence` object that states these terms in
+  machine-readable form: `defaultUse` (free for any use, including commercial
+  use, with the visible attribution line), `attributionRequired: true`,
+  `commercialUseRequiresSeparateLicence: false`, `whiteLabel` (`currency:
+  'EUR'`, `amount: 690` before any applicable VAT, `oneTime: true`,
+  `waivesCustomerFacingAttribution: true`, `requiresSeparateGrant: true`) and
+  `terms`, the URL of LICENSE.txt. `whiteLabel` describes the offer, not a
+  grant: the wrapper returns the same object and the same attribution for
+  every user.
 
 ## Local usage
 

@@ -17,7 +17,7 @@ const time = require('./time');
 const houseMath = require('./houses');
 
 const ENGINE = 'zodiacally-ephemeris';
-const ENGINE_VERSION = '1.1.0';
+const ENGINE_VERSION = '1.1.1';
 
 const BODIES = Object.freeze({
   sun: 'sun',
