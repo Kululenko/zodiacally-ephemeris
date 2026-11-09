@@ -1,0 +1,338 @@
+{
+  "measuredAt": "2026-11-08T20:44:29.815Z",
+  "engine": {
+    "name": "zodiacally-ephemeris",
+    "version": "1.1.0",
+    "dataVersion": "de440s-chironJPL#171-05b57b83e52c",
+    "manifestSha256": "dc4569769900b60381b5bbcd74efdae06713d1a14bbe4e84371b319477219c35"
+  },
+  "references": {
+    "horizons": {
+      "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "quantity": 31,
+      "sourcePerBody": {
+        "sun": "DE441",
+        "moon": "DE441",
+        "mercury": "DE441",
+        "venus": "DE441",
+        "mars": "DE441",
+        "jupiter": "DE441",
+        "saturn": "DE441",
+        "uranus": "DE441",
+        "neptune": "DE441",
+        "pluto": "DE441",
+        "chiron": "JPL#171"
+      }
+    },
+    "swiss": {
+      "library": "sweph",
+      "packageVersion": "2.10.3-7",
+      "swissVersion": "2.10.03",
+      "data": "SE1 files (sepl_18, semo_18, seas_18): \"Created for Astrodienst in Switzerland 2026/05/26, based on JPL Ephemeris DE441.\""
+    }
+  },
+  "machine": {
+    "cpu": "Apple M1",
+    "logicalCores": 8,
+    "memoryGB": 8,
+    "platform": "darwin",
+    "osRelease": "25.5.0",
+    "arch": "arm64",
+    "node": "v25.8.2"
+  },
+  "method": {
+    "samples": 200,
+    "seed": 20261109,
+    "epochs": "uniform JD TT 1900-01-01..2100-01-01, rounded to 1e-6 day, identical TT for all three",
+    "units": "arcseconds, |x| statistics, bias = signed mean"
+  },
+  "bodies": {
+    "sun": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2397,
+        "p99": 0.2093,
+        "median": 0.04874,
+        "mean": 0.08198,
+        "bias": 0.03143
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2388,
+        "p99": 0.2088,
+        "median": 0.04946,
+        "mean": 0.08183,
+        "bias": 0.03138
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.002404,
+        "p99": 0.001874,
+        "median": 0.0005184,
+        "mean": 0.0006283,
+        "bias": 0.00004811
+      }
+    },
+    "moon": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2346,
+        "p99": 0.2103,
+        "median": 0.05116,
+        "mean": 0.08267,
+        "bias": 0.02999
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2358,
+        "p99": 0.2121,
+        "median": 0.05152,
+        "mean": 0.08196,
+        "bias": 0.03157
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.007271,
+        "p99": 0.005907,
+        "median": 0.001596,
+        "mean": 0.002015,
+        "bias": -0.001578
+      }
+    },
+    "mercury": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2409,
+        "p99": 0.2093,
+        "median": 0.04993,
+        "mean": 0.08189,
+        "bias": 0.03139
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2398,
+        "p99": 0.2097,
+        "median": 0.05028,
+        "mean": 0.08173,
+        "bias": 0.03135
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.002333,
+        "p99": 0.002218,
+        "median": 0.0005098,
+        "mean": 0.000649,
+        "bias": 0.00004063
+      }
+    },
+    "venus": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2411,
+        "p99": 0.2085,
+        "median": 0.04964,
+        "mean": 0.08212,
+        "bias": 0.03151
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2401,
+        "p99": 0.2083,
+        "median": 0.05016,
+        "mean": 0.08194,
+        "bias": 0.03146
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.005679,
+        "p99": 0.003834,
+        "median": 0.0005827,
+        "mean": 0.0007456,
+        "bias": 0.00004675
+      }
+    },
+    "mars": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2408,
+        "p99": 0.2086,
+        "median": 0.04974,
+        "mean": 0.0821,
+        "bias": 0.03169
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2394,
+        "p99": 0.2082,
+        "median": 0.04977,
+        "mean": 0.0819,
+        "bias": 0.03169
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.004391,
+        "p99": 0.002149,
+        "median": 0.0004684,
+        "mean": 0.0006446,
+        "bias": -0.000002433
+      }
+    },
+    "jupiter": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2399,
+        "p99": 0.2092,
+        "median": 0.0493,
+        "mean": 0.08218,
+        "bias": 0.03187
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2389,
+        "p99": 0.209,
+        "median": 0.04995,
+        "mean": 0.08203,
+        "bias": 0.0318
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.002117,
+        "p99": 0.001677,
+        "median": 0.0004462,
+        "mean": 0.0005164,
+        "bias": 0.00006929
+      }
+    },
+    "saturn": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2398,
+        "p99": 0.2108,
+        "median": 0.05035,
+        "mean": 0.08231,
+        "bias": 0.03222
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2392,
+        "p99": 0.2103,
+        "median": 0.05033,
+        "mean": 0.08212,
+        "bias": 0.03215
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.002354,
+        "p99": 0.001687,
+        "median": 0.0004634,
+        "mean": 0.0005186,
+        "bias": 0.00007614
+      }
+    },
+    "uranus": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2396,
+        "p99": 0.2092,
+        "median": 0.04877,
+        "mean": 0.08202,
+        "bias": 0.03161
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2386,
+        "p99": 0.2089,
+        "median": 0.04907,
+        "mean": 0.0818,
+        "bias": 0.03151
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.001981,
+        "p99": 0.001542,
+        "median": 0.000472,
+        "mean": 0.0005285,
+        "bias": 0.0001008
+      }
+    },
+    "neptune": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.24,
+        "p99": 0.2092,
+        "median": 0.04918,
+        "mean": 0.08219,
+        "bias": 0.03202
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.2392,
+        "p99": 0.2085,
+        "median": 0.04943,
+        "mean": 0.082,
+        "bias": 0.03198
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.001836,
+        "p99": 0.001437,
+        "median": 0.0004986,
+        "mean": 0.0005168,
+        "bias": 0.00003944
+      }
+    },
+    "pluto": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.2447,
+        "p99": 0.2126,
+        "median": 0.05997,
+        "mean": 0.08236,
+        "bias": 0.03688
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.244,
+        "p99": 0.2123,
+        "median": 0.05943,
+        "mean": 0.08219,
+        "bias": 0.03679
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.001804,
+        "p99": 0.001498,
+        "median": 0.000414,
+        "mean": 0.0004827,
+        "bias": 0.00008756
+      }
+    },
+    "chiron": {
+      "zodiacallyVsHorizons": {
+        "n": 200,
+        "max": 0.242,
+        "p99": 0.2071,
+        "median": 0.05089,
+        "mean": 0.08171,
+        "bias": 0.03125
+      },
+      "swissVsHorizons": {
+        "n": 200,
+        "max": 0.6884,
+        "p99": 0.633,
+        "median": 0.04948,
+        "mean": 0.1002,
+        "bias": 0.03597
+      },
+      "zodiacallyVsSwiss": {
+        "n": 200,
+        "max": 0.8616,
+        "p99": 0.8138,
+        "median": 0.1098,
+        "mean": 0.1613,
+        "bias": -0.004727
+      }
+    }
+  },
+  "note": "Horizons quantity 31 is defined in the IAU 1976/1980 frame; a difference common to both libraries (similar Z-H and S-H, small Z-S) is that frame, not an ephemeris error. Output resolution 1e-7 deg = 0.36 mas."
+}

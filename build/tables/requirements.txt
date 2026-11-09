@@ -1,0 +1,6 @@
+# Offline table builder only (never deployed). All permissive licences.
+skyfield==1.55        # MIT
+jplephem==2.24        # MIT
+numpy==2.5.3          # BSD-3-Clause
+sgp4==2.27            # MIT (Skyfield dependency)
+certifi==2026.7.22    # MPL-2.0 (Skyfield dependency, unmodified)

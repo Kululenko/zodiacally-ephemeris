@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.bin binary
+*.bsp binary
+*.se1 binary

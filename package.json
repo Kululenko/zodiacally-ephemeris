@@ -1,0 +1,86 @@
+{
+  "name": "zodiacally-ephemeris",
+  "version": "1.1.0",
+  "description": "Ephemeris for astrology software in pure JavaScript (Node.js), built on JPL DE440: Sun to Pluto, Chiron, true lunar node, Placidus and whole-sign houses, 1899-2101. No native code. Source-available; free only for private, personal, non-commercial use, not for businesses, client work, paid readings or public services, even free ones. Reproducible benchmark against the Swiss Ephemeris and NASA/JPL Horizons.",
+  "keywords": [
+    "ephemeris",
+    "astrology",
+    "swiss-ephemeris-alternative",
+    "jpl",
+    "de440",
+    "nasa",
+    "planetary-positions",
+    "natal-chart",
+    "birth-chart",
+    "horoscope",
+    "houses",
+    "placidus",
+    "transits",
+    "human-design",
+    "chiron",
+    "lunar-node",
+    "astronomy"
+  ],
+  "homepage": "https://www.zodiacally.com/ephemeris/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kululenko/zodiacally-ephemeris.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kululenko/zodiacally-ephemeris/issues"
+  },
+  "author": "Zodiacally (https://www.zodiacally.com)",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "default": "./index.js"
+    },
+    "./agent": {
+      "types": "./agent.d.ts",
+      "default": "./agent.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "zodiacally-ephemeris": "cli.cjs"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "index.mjs",
+    "chebyshev.js",
+    "houses.js",
+    "time.js",
+    "deltaTTable.js",
+    "agent.cjs",
+    "agent.d.ts",
+    "cli.cjs",
+    "data/",
+    "README.md",
+    "LICENSE.txt",
+    "SOURCES.md",
+    "AGENTS.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules --no-warnings=ExperimentalWarning node_modules/jest/bin/jest.js",
+    "bench": "npm --prefix benchmark install && node benchmark/fetch-swiss-data.mjs && node benchmark/speed.mjs && node benchmark/agreement.mjs && node benchmark/horizons.mjs && node benchmark/summary.mjs"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

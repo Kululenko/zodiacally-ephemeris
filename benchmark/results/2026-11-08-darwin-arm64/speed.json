@@ -1,0 +1,226 @@
+{
+  "measuredAt": "2026-11-08T20:44:04.681Z",
+  "engine": {
+    "name": "zodiacally-ephemeris",
+    "version": "1.1.0",
+    "dataVersion": "de440s-chironJPL#171-05b57b83e52c",
+    "manifestSha256": "dc4569769900b60381b5bbcd74efdae06713d1a14bbe4e84371b319477219c35"
+  },
+  "comparison": {
+    "library": "sweph",
+    "packageVersion": "2.10.3-7",
+    "swissVersion": "2.10.03",
+    "flags": "SEFLG_SWIEPH | SEFLG_SPEED",
+    "data": "SE1 files (sepl_18, semo_18, seas_18): \"Created for Astrodienst in Switzerland 2026/05/26, based on JPL Ephemeris DE441.\""
+  },
+  "machine": {
+    "cpu": "Apple M1",
+    "logicalCores": 8,
+    "memoryGB": 8,
+    "platform": "darwin",
+    "osRelease": "25.5.0",
+    "arch": "arm64",
+    "node": "v25.8.2"
+  },
+  "method": {
+    "inputs": "1024 reproducible inputs (seed 20261104): JD UT1 1900-01-01..2026-12-31, latitude -65..65, longitude -180..180; identical for both libraries",
+    "warmup": 2000,
+    "rounds": 7,
+    "order": "alternating per round",
+    "statistic": "median of the per-round means",
+    "singleThread": true,
+    "coldStartRuns": 15
+  },
+  "warm": {
+    "chart": {
+      "callsPerRound": 5000,
+      "medianZodiacallyMicroseconds": 5.49685,
+      "medianSwissMicroseconds": 77.0476666,
+      "speedup": 14.016694397700501,
+      "rounds": [
+        {
+          "zodiacallyMicroseconds": 5.7623168,
+          "swissMicroseconds": 78.6894834,
+          "ratio": 13.655875949062711
+        },
+        {
+          "zodiacallyMicroseconds": 5.49685,
+          "swissMicroseconds": 77.0476666,
+          "ratio": 14.016694397700501
+        },
+        {
+          "zodiacallyMicroseconds": 5.5415,
+          "swissMicroseconds": 77.011875,
+          "ratio": 13.897297663087611
+        },
+        {
+          "zodiacallyMicroseconds": 5.7840584,
+          "swissMicroseconds": 77.595225,
+          "ratio": 13.415359879492225
+        },
+        {
+          "zodiacallyMicroseconds": 5.2250418,
+          "swissMicroseconds": 76.9438166,
+          "ratio": 14.72597149366346
+        },
+        {
+          "zodiacallyMicroseconds": 5.2913334,
+          "swissMicroseconds": 76.9475666,
+          "ratio": 14.542188288494541
+        },
+        {
+          "zodiacallyMicroseconds": 5.2841666,
+          "swissMicroseconds": 77.1379584,
+          "ratio": 14.597942161778171
+        }
+      ]
+    },
+    "bodiesSameDate": {
+      "callsPerRound": 5000,
+      "medianZodiacallyMicroseconds": 1.5123916,
+      "medianSwissMicroseconds": 69.119125,
+      "speedup": 45.70187046793965,
+      "rounds": [
+        {
+          "zodiacallyMicroseconds": 1.6288581999999998,
+          "swissMicroseconds": 73.8801416,
+          "ratio": 45.357012415199804
+        },
+        {
+          "zodiacallyMicroseconds": 1.5306415999999998,
+          "swissMicroseconds": 69.4104084,
+          "ratio": 45.34726378794357
+        },
+        {
+          "zodiacallyMicroseconds": 1.424325,
+          "swissMicroseconds": 69.2947666,
+          "ratio": 48.65095157355238
+        },
+        {
+          "zodiacallyMicroseconds": 1.5123916,
+          "swissMicroseconds": 68.1002834,
+          "ratio": 45.02820790594182
+        },
+        {
+          "zodiacallyMicroseconds": 1.4288915999999998,
+          "swissMicroseconds": 69.119125,
+          "ratio": 48.37254624493559
+        },
+        {
+          "zodiacallyMicroseconds": 1.5288,
+          "swissMicroseconds": 68.8818082,
+          "ratio": 45.056127812663526
+        },
+        {
+          "zodiacallyMicroseconds": 1.4040666000000002,
+          "swissMicroseconds": 68.2305166,
+          "ratio": 48.59492890152077
+        }
+      ]
+    },
+    "singleBody": {
+      "callsPerRound": 50000,
+      "medianZodiacallyMicroseconds": 0.12143833999999999,
+      "medianSwissMicroseconds": 17.31781416,
+      "speedup": 142.60582086349336,
+      "rounds": [
+        {
+          "zodiacallyMicroseconds": 0.13075084,
+          "swissMicroseconds": 17.399035,
+          "ratio": 133.07015847852298
+        },
+        {
+          "zodiacallyMicroseconds": 0.1247975,
+          "swissMicroseconds": 17.31781416,
+          "ratio": 138.7673163324586
+        },
+        {
+          "zodiacallyMicroseconds": 0.11362583999999999,
+          "swissMicroseconds": 17.249094160000002,
+          "ratio": 151.80608706611105
+        },
+        {
+          "zodiacallyMicroseconds": 0.12227500000000001,
+          "swissMicroseconds": 17.337139179999998,
+          "ratio": 141.7880938867307
+        },
+        {
+          "zodiacallyMicroseconds": 0.11576916,
+          "swissMicroseconds": 17.25216,
+          "ratio": 149.02207116299368
+        },
+        {
+          "zodiacallyMicroseconds": 0.12143833999999999,
+          "swissMicroseconds": 17.23750084,
+          "ratio": 141.9444702554399
+        },
+        {
+          "zodiacallyMicroseconds": 0.11859333999999999,
+          "swissMicroseconds": 17.54379084,
+          "ratio": 147.93234459877763
+        }
+      ]
+    },
+    "houses": {
+      "callsPerRound": 50000,
+      "medianZodiacallyMicroseconds": 3.5683375,
+      "medianSwissMicroseconds": 9.506903340000001,
+      "speedup": 2.66423883391075,
+      "rounds": [
+        {
+          "zodiacallyMicroseconds": 3.57778082,
+          "swissMicroseconds": 9.86455666,
+          "ratio": 2.75717187728677
+        },
+        {
+          "zodiacallyMicroseconds": 3.5679908399999998,
+          "swissMicroseconds": 9.506903340000001,
+          "ratio": 2.6644976868830756
+        },
+        {
+          "zodiacallyMicroseconds": 3.57374,
+          "swissMicroseconds": 9.51925832,
+          "ratio": 2.663668403409314
+        },
+        {
+          "zodiacallyMicroseconds": 3.5683375,
+          "swissMicroseconds": 9.50229916,
+          "ratio": 2.6629485467672267
+        },
+        {
+          "zodiacallyMicroseconds": 3.56632416,
+          "swissMicroseconds": 9.51168918,
+          "ratio": 2.6670848619661087
+        },
+        {
+          "zodiacallyMicroseconds": 3.57899416,
+          "swissMicroseconds": 9.4869275,
+          "ratio": 2.650724498527821
+        },
+        {
+          "zodiacallyMicroseconds": 3.55735,
+          "swissMicroseconds": 9.49686166,
+          "ratio": 2.6696450054113314
+        }
+      ]
+    }
+  },
+  "cold": {
+    "zodiacally": {
+      "runs": 15,
+      "medianLoadAndFirstChartMs": 19.202916000000002,
+      "medianProcessWallMs": 77.60320800000045
+    },
+    "swiss": {
+      "runs": 15,
+      "medianLoadAndFirstChartMs": 10.3885,
+      "medianProcessWallMs": 68.88891700000022
+    }
+  },
+  "limitations": [
+    "Node.js API comparison on one machine; the Swiss Ephemeris is called through the sweph native addon, which adds a JavaScript-to-C call per function. A C program calling the Swiss Ephemeris directly is not measured here.",
+    "Zodiacally Ephemeris evaluates precomputed apparent longitudes (one polynomial per body); the Swiss Ephemeris computes the full apparent-place reduction and returns longitude, latitude, distance and their speeds on every call.",
+    "Zodiacally Ephemeris covers fewer bodies, house systems and a shorter date range than the Swiss Ephemeris.",
+    "Speed says nothing about accuracy; see agreement.mjs and horizons.mjs."
+  ]
+}

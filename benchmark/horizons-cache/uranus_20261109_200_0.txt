@@ -1,0 +1,151 @@
+
+
+*******************************************************************************
+Ephemeris / API_USER Sun Nov  8 12:14:04 2026 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Uranus Barycenter (7)           {source: DE441}
+Center body name: Earth (399)                     {source: DE441}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 1900-Dec-12 17:40:29.8850 TT      
+Stop  time      : A.D. 1953-Mar-15 08:26:19.3632 TT      
+Step-size       : 0 steps
+*******************************************************************************
+Target pole/equ : undefined
+Target radii    : undefined                                                    
+Center geodetic : 0.0, 0.0, -6378.137             {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}       
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE441}
+Rel. light bend : Sun                             {source: DE441}
+Rel. lght bnd GM: 1.3271E+11 km^3/s^2                                          
+Atmos refraction: NO (AIRLESS)
+RA format       : DEG
+Time format     : CAL 
+Calendar mode   : Mixed Julian/Gregorian
+EOP file        : eop.261106.p270202                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-NOV-06. PREDICTS-> 2027-FEB-01
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+ Date__(TT)__HR:MN:SC.fff, , ,    ObsEcLon,   ObsEcLat,
+*******************************************************
+$$SOE
+ 1900-Dec-12 17:40:29.885, , , 253.1663690,  0.0098775,
+ 1903-Dec-12 01:28:36.538, , , 265.3965140, -0.1550700,
+ 1907-Feb-19 18:35:15.158, , , 281.3734472, -0.3234858,
+ 1907-Sep-19 21:32:07.843, , , 278.7322142, -0.3679147,
+ 1907-Oct-22 02:56:51.130, , , 279.1968045, -0.3621530,
+ 1907-Nov-11 16:57:56.419, , , 279.9205165, -0.3593030,
+ 1908-May-11 07:58:29.510, , , 286.7456267, -0.4062788,
+ 1909-Sep-09 17:31:27.466, , , 287.2381153, -0.4687930,
+ 1910-Aug-05 19:28:55.286, , , 292.4587803, -0.5205231,
+ 1910-Nov-02 07:16:27.754, , , 291.6940204, -0.4985105,
+ 1912-May-09 23:07:24.758, , , 303.4589362, -0.5737336,
+ 1912-Nov-03 11:42:43.373, , , 299.7819296, -0.5782710,
+ 1913-Jun-08 19:58:50.160, , , 307.2561169, -0.6248229,
+ 1914-Jul-25 08:24:29.203, , , 309.9783900, -0.6740855,
+ 1915-May-12 09:15:57.312, , , 315.6357242, -0.6668095,
+ 1916-Jul-17 05:52:57.158, , , 318.6634700, -0.7273438,
+ 1916-Nov-14 07:04:46.704, , , 315.9328198, -0.6985266,
+ 1917-Jan-26 05:27:26.496, , , 318.9035880, -0.6731676,
+ 1921-Oct-27 05:37:41.578, , , 335.8700154, -0.7905734,
+ 1925-Jul-20 23:29:08.707, , , 355.3147920, -0.7841869,
+ 1926-May-14 09:50:17.002, , , 358.3990974, -0.7334510,
+ 1927-Dec-18 22:28:53.472, , , 359.5292790, -0.7350669,
+ 1928-Apr-24 08:20:05.251, , ,   5.0844251, -0.6954666,
+ 1928-Aug-29 23:56:26.592, , ,   6.5349343, -0.7522350,
+ 1929-Aug-02 20:57:57.571, , ,  11.2720549, -0.7181482,
+ 1931-May-27 06:57:17.165, , ,  18.0101834, -0.6323720,
+ 1931-Jun-17 08:28:40.195, , ,  18.7847127, -0.6398021,
+ 1931-Aug-08 10:58:29.770, , ,  19.3064861, -0.6632603,
+ 1932-Jun-29 09:43:09.408, , ,  23.0300171, -0.6131740,
+ 1933-Apr-16 03:24:00.893, , ,  23.4869159, -0.5661639,
+ 1936-Mar-20 18:59:42.490, , ,  33.5037898, -0.4631575,
+ 1939-Jun-16 15:19:04.627, , ,  49.9449982, -0.3192815,
+ 1939-Jul-25 05:49:36.797, , ,  51.4826483, -0.3220916,
+ 1941-Mar-26 18:09:27.648, , ,  53.4338755, -0.2332115,
+ 1941-Jun-10 08:12:36.922, , ,  57.5505291, -0.2194026,
+ 1941-Aug-22 00:22:38.381, , ,  60.2620156, -0.2192427,
+ 1941-Nov-27 08:33:59.098, , ,  58.0718646, -0.2157530,
+ 1943-Aug-26 12:16:48.979, , ,  68.6877679, -0.1077878,
+ 1944-Dec-21 13:37:06.816, , ,  70.3588955, -0.0346971,
+ 1945-Sep-02 14:24:47.606, , ,  77.2702788,  0.0070948,
+ 1945-Oct-17 10:55:16.579, , ,  77.2055758,  0.0146723,
+ 1945-Dec-02 23:58:04.138, , ,  75.6304419,  0.0227325,
+ 1945-Dec-05 02:25:26.918, , ,  75.5413751,  0.0230817,
+ 1946-May-05 16:24:41.962, , ,  75.6050258,  0.0438913,
+ 1947-Jul-02 10:43:06.499, , ,  83.0177758,  0.1072061,
+ 1948-Jan-04 00:30:30.384, , ,  83.3832491,  0.1492000,
+ 1949-Apr-16 23:26:32.582, , ,  87.2991040,  0.2099699,
+ 1951-Jan-01 09:54:47.261, , ,  97.3334641,  0.3274208,
+ 1951-Apr-15 14:19:29.395, , ,  95.8566329,  0.3208207,
+ 1953-Mar-15 08:26:19.363, , , 104.4598091,  0.4350980,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Terrestrial Time ("TT") output was requested. This continuous timescale
+is the relativistic proper time of a clock at rest on the Earth's geoid (at
+"mean sea level"), but defined for a specified gravitational time dilation,
+so a coordinate time. It is appropriate for observations and measurements
+from the surface of the Earth.
+
+  TT runs at a uniform rate of one SI second per second and is independent of
+irregularities in Earth's rotation. It is a theoretical ideal, approximated
+(with a constant offset of 32.184 seconds) by the measured International Atomic
+Time (TAI) after 1955.  TT is the relativistic successor to the now deprecated
+non-relativistic Ephemeris Time (ET).
+
+  The TT scale requested here is a time-scale conversion from internal
+Barycentric Dynamical Time (TDB) and differs periodically from TDB with an
+amplitude less than 2 ms for several thousand years centered on present.
+The time-scale conversion for Earth is used regardless of observer location
+within the solar system, although clock rates may differ due to the local
+gravity field.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date.
+ 
+CALENDAR SYSTEM
+
+  Mixed calendar mode was active such that calendar dates after AD 1582-Oct-15
+(if any) are in the modern Gregorian system. Dates prior to 1582-Oct-5 (if any)
+are in the Julian calendar system, which is automatically extended for dates
+prior to its adoption on 45-Jan-1 BC.  The Julian calendar is useful for
+matching historical dates. The Gregorian calendar more accurately corresponds
+to the Earth's orbital motion and seasons. A "Gregorian-only" calendar mode is
+available if such physical events are the primary interest.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ 'ObsEcLon,   ObsEcLat,' =
+   Observer-centered IAU76/80 ecliptic-of-date longitude and latitude of the
+target centers' apparent position, with light-time, gravitational deflection of
+light, and stellar aberrations.  Units: DEGREES
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Inquiries   : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************

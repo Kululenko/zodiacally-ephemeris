@@ -1,0 +1,50 @@
+name: Verification report
+description: Share the results of an independent check (confirming or contradicting our numbers).
+title: "Verification: "
+labels: [verification]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for checking. Reports that contradict our published numbers are just as welcome as confirmations. The steps are in [docs/verify.md](https://github.com/Kululenko/zodiacally-ephemeris/blob/main/docs/verify.md).
+  - type: dropdown
+    id: what
+    attributes:
+      label: What did you check?
+      multiple: true
+      options:
+        - npm test
+        - Speed benchmark (benchmark/speed.mjs)
+        - Agreement with the Swiss Ephemeris (benchmark/agreement.mjs)
+        - Swiss Ephemeris on DE440 (agreement.mjs --jpl)
+        - NASA/JPL Horizons (benchmark/horizons.mjs or own queries)
+        - Rebuild of the tables (build/tables/build.sh)
+        - Code or method review
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Machine and versions
+      placeholder: "e.g. Ryzen 7 7700, Linux 6.8, Node 24.1, engine 1.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Paste the generated benchmark/results/<run>/README.md or your own numbers.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: differences
+    attributes:
+      label: Differences from our published numbers, and your interpretation
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Listing
+      options:
+        - label: You may link this report from docs/verify.md and the project page.

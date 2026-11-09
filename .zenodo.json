@@ -1,0 +1,13 @@
+{
+  "title": "Zodiacally Ephemeris: a table-driven JPL DE440 ephemeris for astrological software",
+  "upload_type": "software",
+  "description": "<p>Source-available JavaScript ephemeris for astrological software (Node.js): apparent geocentric ecliptic longitudes and speeds of the Sun, Moon, Mercury to Pluto, Chiron and the true lunar node for 1899–2101, built from NASA/JPL DE440s and, for Chiron, the JPL Horizons orbit solution JPL#171, with IAU 2006 sidereal time and Placidus and whole-sign houses. The Chebyshev tables reproduce directly computed apparent places to about 0.5 mas at dense check points (largest error found 0.5002 mas); a rebuild from public JPL data reproduced them byte-identically on macOS/arm64 and numerically equivalently (within 0.00000002″) on Linux x86-64. The repository contains a reproducible benchmark against the Swiss Ephemeris 2.10.03 and NASA/JPL Horizons, and a technical note (docs/technical-note.md). Free only for private, personal, non-commercial use, not for businesses, client work, paid readings or public services, even free ones; commercial use requires a separate licence (see LICENSE.txt).</p>",
+  "creators": [{ "name": "Zodiacally" }],
+  "keywords": ["ephemeris", "astrology", "JPL DE440", "planetary positions", "house systems", "JavaScript"],
+  "license": "other-closed",
+  "access_right": "open",
+  "related_identifiers": [
+    { "identifier": "https://github.com/Kululenko/zodiacally-ephemeris", "relation": "isSupplementTo", "scheme": "url" },
+    { "identifier": "10.3847/1538-3881/abd414", "relation": "references", "scheme": "doi" }
+  ]
+}

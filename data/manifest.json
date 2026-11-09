@@ -1,0 +1,449 @@
+{
+  "engine": "zodiacally-ephemeris",
+  "formatVersion": 2,
+  "dataVersion": "de440s-chironJPL#171-05b57b83e52c",
+  "createdBy": "tools/ephemeris-build/build.py 1.1.0",
+  "sources": {
+    "de440s": {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de440s.bsp",
+      "bytes": 32726016,
+      "sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+      "license": "JPL/NASA, U.S. Government work (public domain)",
+      "reference": "Park et al. 2021, AJ 161:105, doi:10.3847/1538-3881/abd414"
+    },
+    "chironHorizons": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "target": "2060 Chiron (1977 UB)",
+      "orbitSolution": "JPL#171",
+      "solutionDate": "2026-Jun-05_06:09:00",
+      "grid": "barycentric ICRF state vectors, TDB, JD 2414600.5..2488600.5 step 4.0 d",
+      "rawResponsesSha256": "85a481604b2542809cd9102813094ef17114aebec49be4da8b4d4218970b1e60",
+      "hermiteInterpolationErrorArcsec": 2.3514084978150967e-06
+    },
+    "software": {
+      "skyfield": "1.55",
+      "jplephem": "2.24",
+      "numpy": "2.5.3"
+    },
+    "conventions": {
+      "timeScale": "TT; DE440s and Horizons are read at TDB = TT + periodic terms (Skyfield)",
+      "apparentPlace": "observer = geocentre; light-time iteration; light deflection by the Sun only (rays behind the solar disc: enclosed mass of an n=3 polytrope); relativistic annual aberration",
+      "frame": "GCRS -> true equator/equinox of date by frame bias + IAU 2006 precession + IAU 2000A nutation, then x-rotation by the true obliquity (true ecliptic of date)",
+      "planets": "Mars..Pluto are system barycentres (as in DE440s)",
+      "trueNode": "lightTimeRetarded_trueEclipticOfDate: h = r x v of the geocentric Moon (DE440s) at the light-time retarded epoch, node on the mean ecliptic of date (IAU 2006) plus delta-psi (IAU 2000A)",
+      "chebyshev": "per record: interpolation at the n Chebyshev-Lobatto points (record ends shared by neighbours); verified at 24 equally spaced points per record. Planet/Chiron records within 3 deg of the Sun or above 0.5 mas: checked at 401 points; a record above 0.5 mas there is replaced by halved sub-records (<name>.refined.bin, same interpolation and n) until each meets it at 24 points"
+    },
+    "fitReport": {
+      "sun": {
+        "maxArcsec": 0.00039327026115643093,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        }
+      },
+      "moon": {
+        "maxArcsec": 0.00010688850125006866,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.00010688850125006866,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        }
+      },
+      "mercury": {
+        "maxArcsec": 0.0005001823979000619,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 5.812366907775868e-05,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 1671,
+        "recordsRefined": 560,
+        "subRecords": 1768,
+        "maxArcsecBeforeRefinement": 2.0003860072392854
+      },
+      "venus": {
+        "maxArcsec": 0.0004985085752196028,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 8.99353040040296e-05,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 467,
+        "recordsRefined": 51,
+        "subRecords": 150,
+        "maxArcsecBeforeRefinement": 2.402092018746771
+      },
+      "mars": {
+        "maxArcsec": 0.0004916446641800576,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 8.43764610181097e-05,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 229,
+        "recordsRefined": 67,
+        "subRecords": 191,
+        "maxArcsecBeforeRefinement": 4.143275472472396
+      },
+      "jupiter": {
+        "maxArcsec": 0.0004999084922019392,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.00022127119336801115,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 275,
+        "recordsRefined": 202,
+        "subRecords": 766,
+        "maxArcsecBeforeRefinement": 5.455453514548481
+      },
+      "saturn": {
+        "maxArcsec": 0.0004976198397343978,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.00017895608834805898,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 278,
+        "recordsRefined": 189,
+        "subRecords": 594,
+        "maxArcsecBeforeRefinement": 5.179668469213539
+      },
+      "uranus": {
+        "maxArcsec": 0.0004977749540557852,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.00028207191462570336,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 279,
+        "recordsRefined": 225,
+        "subRecords": 1046,
+        "maxArcsecBeforeRefinement": 5.990503055681984
+      },
+      "neptune": {
+        "maxArcsec": 0.00048770756393423653,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.000153484597831266,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 280,
+        "recordsRefined": 216,
+        "subRecords": 808,
+        "maxArcsecBeforeRefinement": 6.891049834462137
+      },
+      "pluto": {
+        "maxArcsec": 0.0004562960953080619,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.00011209629064978799,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 289,
+        "recordsRefined": 32,
+        "subRecords": 99,
+        "maxArcsecBeforeRefinement": 3.5226630886654675
+      },
+      "chiron": {
+        "maxArcsec": 0.0004988439741282491,
+        "maxArcsecWhereSolarElongationAtLeast1deg": 0.00010533244676480535,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        },
+        "recordsExamined": 282,
+        "recordsRefined": 74,
+        "subRecords": 227,
+        "maxArcsecBeforeRefinement": 5.4505714524339055
+      },
+      "trueNode": {
+        "maxArcsec": 1.8719106265052687e-05,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        }
+      },
+      "nutationLongitude": {
+        "maxArcsec": 0.00038988063610001164,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        }
+      },
+      "trueObliquity": {
+        "maxArcsec": 0.0003954905650971341,
+        "fractionOfTimeAboveArcsec": {
+          "0.0005": 0.0,
+          "0.01": 0.0,
+          "0.05": 0.0
+        }
+      }
+    }
+  },
+  "tables": {
+    "sun": {
+      "file": "sun.bin",
+      "sha256": "f4ea7918040d169235dcb641bdea9ed5e257d777a9e18a22c992b9559467ac53",
+      "bytes": 405856,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox)",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 32,
+      "coefficients": 22,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0003933
+    },
+    "moon": {
+      "file": "moon.bin",
+      "sha256": "f8a17da942a979daa5342592a602d0f68f070ff46c70a22df261e2b5726e73f9",
+      "bytes": 811712,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox)",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 22,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0001069
+    },
+    "mercury": {
+      "file": "mercury.bin",
+      "sha256": "7427811558b3319c073c115202479a5a736a69d4b953fcb4a19486f3a7efaa5b",
+      "bytes": 553440,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox)",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 15,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0005002,
+      "refinedRecords": {
+        "file": "mercury.refined.bin",
+        "sha256": "4dbad886a502de43f0f0fcd3dceef2db7cc8d945c4b2ee60d9565028601e0145",
+        "bytes": 240448,
+        "count": 1768
+      }
+    },
+    "venus": {
+      "file": "venus.bin",
+      "sha256": "65cbfce5c92200b74ac6f366f2d652dd4436ffa0ccd168f43d460fa582f57c41",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox)",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004985,
+      "refinedRecords": {
+        "file": "venus.refined.bin",
+        "sha256": "75fa239d457cd6cf86137a0e6636deace616168283738bfe3160ad71b947e968",
+        "bytes": 19200,
+        "count": 150
+      }
+    },
+    "mars": {
+      "file": "mars.bin",
+      "sha256": "68bc45e5948925ba23b469fe82e14ca04928d210eb1e197f78697d9fd50abf61",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox), Mars system barycentre",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004916,
+      "refinedRecords": {
+        "file": "mars.refined.bin",
+        "sha256": "0d6a567845f402efe7ef7ac602730481b5b9c11804c80d6777204ca6781dbf52",
+        "bytes": 24448,
+        "count": 191
+      }
+    },
+    "jupiter": {
+      "file": "jupiter.bin",
+      "sha256": "68038c768edae5e508c0740788c5d4de692583e6c0e7fce5546327b1c2f7a27a",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox), Jupiter system barycentre",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004999,
+      "refinedRecords": {
+        "file": "jupiter.refined.bin",
+        "sha256": "081db4100d930c2d178d44655bee347ff997d0666cc800c959ab3a0eb5378a62",
+        "bytes": 98048,
+        "count": 766
+      }
+    },
+    "saturn": {
+      "file": "saturn.bin",
+      "sha256": "2fc81c684465a6d1bd65a90bdccfa934afe4afb1f567e76ff2b0da159c8966bb",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox), Saturn system barycentre",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004976,
+      "refinedRecords": {
+        "file": "saturn.refined.bin",
+        "sha256": "c8095dff6f9acdc38b9912c7bec425372a751b2cbb30da87efaa5ecbc096ad09",
+        "bytes": 76032,
+        "count": 594
+      }
+    },
+    "uranus": {
+      "file": "uranus.bin",
+      "sha256": "917b292608af06483472f9360aa3cdfa674a9dc028f6b61f9bda6689caa944bf",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox), Uranus system barycentre",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004978,
+      "refinedRecords": {
+        "file": "uranus.refined.bin",
+        "sha256": "f1c2b8d349479e85e71b696d99febcc82702bbbf8151ad0d9ee2e1bda1108924",
+        "bytes": 133888,
+        "count": 1046
+      }
+    },
+    "neptune": {
+      "file": "neptune.bin",
+      "sha256": "cae0e9c1d0ed8bdb7d6822ea20bb9e6acd78ea173b40e03876a00e8f055e04fe",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox), Neptune system barycentre",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004877,
+      "refinedRecords": {
+        "file": "neptune.refined.bin",
+        "sha256": "0ed58eb52a8d3eadc6784ba0cbbcd3f94d549b898f630c98f55dc3f2e2b54093",
+        "bytes": 103424,
+        "count": 808
+      }
+    },
+    "pluto": {
+      "file": "pluto.bin",
+      "sha256": "66de7499c8ebb26e3a2cfd9f62187113f6bb029b4a685a0c1f724cbf9de4af50",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox), Pluto system barycentre",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004563,
+      "refinedRecords": {
+        "file": "pluto.refined.bin",
+        "sha256": "ce9199eef3a57dc573c3f2dfeae0cbf1ed42e6c75e8f2e0eaaf5b965d3c2ce04",
+        "bytes": 12672,
+        "count": 99
+      }
+    },
+    "chiron": {
+      "file": "chiron.bin",
+      "sha256": "31853ee5fc093be58ee41a17e7a5ef1b78be65ca9303dd3c843152f5d9472cc2",
+      "bytes": 516544,
+      "quantity": "apparent geocentric ecliptic longitude of date (true equinox)",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 14,
+      "angle": true,
+      "maxFitErrorArcsec": 0.0004988,
+      "refinedRecords": {
+        "file": "chiron.refined.bin",
+        "sha256": "87a60fd0d8d59f626a72ebd4053f0581b4d28764ef02005ba07c103349cb58e7",
+        "bytes": 29056,
+        "count": 227
+      }
+    },
+    "trueNode": {
+      "file": "trueNode.bin",
+      "sha256": "dc8831d938b883e69e08406eb19f6c7a87d607535d031bec2b54071a6270ea2a",
+      "bytes": 737920,
+      "quantity": "osculating ascending node of the geocentric lunar orbit, longitude of date (true equinox)",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 16,
+      "coefficients": 20,
+      "angle": true,
+      "maxFitErrorArcsec": 1.87e-05
+    },
+    "nutationLongitude": {
+      "file": "nutationLongitude.bin",
+      "sha256": "e25b1faec490ae52eb40d276762e33360c1043df49ca8843cbfcc0385129c804",
+      "bytes": 405856,
+      "quantity": "nutation in longitude delta-psi, IAU 2000A",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 32,
+      "coefficients": 22,
+      "angle": false,
+      "maxFitErrorArcsec": 0.0003899
+    },
+    "trueObliquity": {
+      "file": "trueObliquity.bin",
+      "sha256": "e6b8de63f7d2255e47b0cd237b3a9405e0f5c03760204da77daefef73c4d7a0a",
+      "bytes": 368960,
+      "quantity": "true obliquity of date: IAU 2006 mean obliquity + IAU 2000A delta-epsilon",
+      "unit": "deg",
+      "timeScale": "TT",
+      "jdStart": 2414655.5,
+      "jdEnd": 2488447.5,
+      "intervalDays": 32,
+      "coefficients": 20,
+      "angle": false,
+      "maxFitErrorArcsec": 0.0003955
+    }
+  }
+}

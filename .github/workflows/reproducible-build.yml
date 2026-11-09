@@ -1,0 +1,51 @@
+name: Reproducible build from NASA/JPL data
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 1 * *'
+permissions:
+  contents: read
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Rebuild all tables from JPL DE440s and the committed Horizons responses
+        run: sh build/tables/build.sh
+        env:
+          ZODIACALLY_EPHEMERIS_OUT_DIR: ${{ runner.temp }}/rebuild/data
+          ZODIACALLY_EPHEMERIS_FIXTURE: ${{ runner.temp }}/rebuild/reference.json
+      - name: Byte comparison (informational; floating-point results can differ in the last bits between platforms)
+        run: |
+          for f in data/*; do
+            if cmp -s "$f" "$RUNNER_TEMP/rebuild/$f"; then echo "identical $f"; else echo "differs   $f"; fi
+          done
+          cmp -s test/fixtures/reference.json "$RUNNER_TEMP/rebuild/reference.json" && echo "identical fixture" || echo "differs   fixture"
+      - name: Every table must agree to within 1 micro-arcsecond (strict bound from the Chebyshev coefficients)
+        shell: bash
+        run: node build/compare-tables.mjs data "$RUNNER_TEMP/rebuild/data" --max-arcsec 1e-6 | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Directly computed reference values must agree to within 0.1 milli-arcsecond (the table fit tolerance is 0.5 mas)
+        shell: bash
+        run: |
+          node -e "
+          const a = require('./test/fixtures/reference.json'), b = require(process.env.RUNNER_TEMP + '/rebuild/reference.json');
+          let worst = 0;
+          for (const [name, t] of Object.entries(a.tables)) {
+            const u = b.tables[name];
+            if (!u || u.jd.length !== t.jd.length) throw new Error(name + ': different reference epochs');
+            t.value.forEach((v, i) => { const d = Math.abs(((((v - u.value[i]) % 360) + 540) % 360) - 180) * 3600; worst = Math.max(worst, d); });
+          }
+          console.log('largest reference-value difference: ' + worst.toExponential(2) + ' arcsec');
+          if (worst > 1e-4) process.exit(1);" | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rebuilt-tables
+          path: ${{ runner.temp }}/rebuild/

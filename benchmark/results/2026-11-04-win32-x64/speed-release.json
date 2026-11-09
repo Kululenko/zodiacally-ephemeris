@@ -1,0 +1,84 @@
+{
+  "measuredAt": "2026-11-04T17:56:04.301Z",
+  "engine": {
+    "name": "zodiacally-ephemeris",
+    "version": "1.1.0",
+    "dataVersion": "de440s-chironJPL#171-05b57b83e52c",
+    "manifestSha256": "dc4569769900b60381b5bbcd74efdae06713d1a14bbe4e84371b319477219c35"
+  },
+  "comparison": {
+    "library": "sweph",
+    "packageVersion": "2.10.3-7",
+    "swissVersion": "2.10.03",
+    "flags": "SEFLG_SWIEPH | SEFLG_SPEED",
+    "fallback": false
+  },
+  "machine": {
+    "cpu": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v22.14.0"
+  },
+  "method": {
+    "operation": "12 apparent geocentric longitudes with speeds plus Placidus houses",
+    "warmup": 2000,
+    "rounds": 7,
+    "calculationsPerRound": 5000,
+    "samples": 1024,
+    "seed": 20261104,
+    "dateRange": "1900-01-01 through 2026-12-31",
+    "input": "same UT1 Julian day and coordinates for both APIs",
+    "order": "alternating per round",
+    "singleThread": true,
+    "startupIncluded": false,
+    "networkIncluded": false,
+    "aiGenerationIncluded": false
+  },
+  "median": {
+    "zodiacallyMicroseconds": 7.5402,
+    "swissMicroseconds": 177.52592,
+    "speedup": 23.543927216784702
+  },
+  "rounds": [
+    {
+      "zodiacallyMicroseconds": 7.55758,
+      "swissMicroseconds": 149.35912,
+      "ratio": 19.76282354933722
+    },
+    {
+      "zodiacallyMicroseconds": 6.50504,
+      "swissMicroseconds": 149.25492000000003,
+      "ratio": 22.944504568765147
+    },
+    {
+      "zodiacallyMicroseconds": 6.5521,
+      "swissMicroseconds": 157.62678,
+      "ratio": 24.057444178202406
+    },
+    {
+      "zodiacallyMicroseconds": 7.60042,
+      "swissMicroseconds": 195.50851999999998,
+      "ratio": 25.723383707742464
+    },
+    {
+      "zodiacallyMicroseconds": 7.70542,
+      "swissMicroseconds": 185.47882,
+      "ratio": 24.07121480723958
+    },
+    {
+      "zodiacallyMicroseconds": 7.5402,
+      "swissMicroseconds": 182.42934,
+      "ratio": 24.194230922256704
+    },
+    {
+      "zodiacallyMicroseconds": 7.22508,
+      "swissMicroseconds": 177.52592,
+      "ratio": 24.57078952759001
+    }
+  ],
+  "limitations": [
+    "Local warm Node API benchmark; not a native C benchmark or production latency guarantee.",
+    "The operations cover a smaller feature set and date range than Swiss Ephemeris.",
+    "Speed and agreement with a reference do not establish greater absolute astronomical accuracy."
+  ]
+}

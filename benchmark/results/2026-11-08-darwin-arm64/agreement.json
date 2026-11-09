@@ -1,0 +1,501 @@
+{
+  "measuredAt": "2026-11-08T20:44:06.978Z",
+  "engine": {
+    "name": "zodiacally-ephemeris",
+    "version": "1.1.0",
+    "dataVersion": "de440s-chironJPL#171-05b57b83e52c",
+    "manifestSha256": "dc4569769900b60381b5bbcd74efdae06713d1a14bbe4e84371b319477219c35"
+  },
+  "reference": {
+    "library": "sweph",
+    "packageVersion": "2.10.3-7",
+    "swissVersion": "2.10.03",
+    "data": "SE1 files: \"Created for Astrodienst in Switzerland 2026/05/26, based on JPL Ephemeris DE441.\"",
+    "se1Header": "Created for Astrodienst in Switzerland 2026/05/26, based on JPL Ephemeris DE441.",
+    "jplReferee": false
+  },
+  "machine": {
+    "cpu": "Apple M1",
+    "logicalCores": 8,
+    "memoryGB": 8,
+    "platform": "darwin",
+    "osRelease": "25.5.0",
+    "arch": "arm64",
+    "node": "v25.8.2"
+  },
+  "method": {
+    "samples": 20000,
+    "seed": 20261108,
+    "epochs": "uniform JD TT 1900-01-01..2100-01-01",
+    "positions": "engine.positionTT(jdTT) vs swe.calc(jdTT, body, SEFLG_SWIEPH|SEFLG_SPEED) (and SEFLG_JPLEPH with --jpl): apparent geocentric ecliptic longitude of date, tropical",
+    "houses": "engine.houses(jdUT1) vs swe.houses(jdUT1), Placidus, latitude -66..66, same UT1",
+    "units": "arcseconds (longitude) and arcseconds per day (speed); |x| statistics, bias = signed mean"
+  },
+  "bodies": {
+    "sun": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.003019,
+          "p99": 0.002116,
+          "median": 0.0005414,
+          "mean": 0.0006468,
+          "bias": 0.0001573
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 0.003957,
+          "p99": 0.002513,
+          "median": 0.001374,
+          "mean": 0.001278,
+          "bias": 0.00002128
+        }
+      }
+    },
+    "moon": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.008697,
+          "p99": 0.006459,
+          "median": 0.001445,
+          "mean": 0.001885,
+          "bias": -0.001442
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 0.2777,
+          "p99": 0.2579,
+          "median": 0.08969,
+          "mean": 0.09909,
+          "bias": -0.0002748
+        }
+      }
+    },
+    "mercury": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.01445,
+          "p99": 0.002331,
+          "median": 0.0005575,
+          "mean": 0.0006775,
+          "bias": 0.0001566
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 0.3268,
+          "p99": 0.02906,
+          "median": 0.004525,
+          "mean": 0.007123,
+          "bias": -0.00564
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19863,
+          "max": 0.003964,
+          "p99": 0.002327,
+          "median": 0.0005565,
+          "mean": 0.0006754,
+          "bias": 0.0001552
+        },
+        "speedArcsecPerDay": {
+          "n": 19863,
+          "max": 0.03181,
+          "p99": 0.02887,
+          "median": 0.004462,
+          "mean": 0.007012,
+          "bias": -0.00554
+        }
+      }
+    },
+    "venus": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.08034,
+          "p99": 0.004417,
+          "median": 0.0005788,
+          "mean": 0.0008069,
+          "bias": 0.0001599
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 0.1602,
+          "p99": 0.006871,
+          "median": 0.003282,
+          "mean": 0.003191,
+          "bias": -0.002668
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19895,
+          "max": 0.008979,
+          "p99": 0.004415,
+          "median": 0.0005791,
+          "mean": 0.0008033,
+          "bias": 0.0001652
+        },
+        "speedArcsecPerDay": {
+          "n": 19895,
+          "max": 0.01165,
+          "p99": 0.00685,
+          "median": 0.00326,
+          "mean": 0.003166,
+          "bias": -0.002657
+        }
+      }
+    },
+    "mars": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.1308,
+          "p99": 0.002801,
+          "median": 0.0005167,
+          "mean": 0.0006666,
+          "bias": 0.000156
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 0.9618,
+          "p99": 0.003393,
+          "median": 0.000986,
+          "mean": 0.001101,
+          "bias": -0.000766
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19904,
+          "max": 0.005023,
+          "p99": 0.002791,
+          "median": 0.000518,
+          "mean": 0.0006594,
+          "bias": 0.0001481
+        },
+        "speedArcsecPerDay": {
+          "n": 19904,
+          "max": 0.008173,
+          "p99": 0.003356,
+          "median": 0.0009841,
+          "mean": 0.001044,
+          "bias": -0.0008171
+        }
+      }
+    },
+    "jupiter": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.1228,
+          "p99": 0.001677,
+          "median": 0.000421,
+          "mean": 0.0005153,
+          "bias": 0.0001648
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 12.57,
+          "p99": 0.001671,
+          "median": 0.0003137,
+          "mean": 0.001249,
+          "bias": 0.0006477
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19927,
+          "max": 0.002909,
+          "p99": 0.001669,
+          "median": 0.0004208,
+          "mean": 0.0005023,
+          "bias": 0.0001591
+        },
+        "speedArcsecPerDay": {
+          "n": 19927,
+          "max": 0.002771,
+          "p99": 0.001644,
+          "median": 0.0003135,
+          "mean": 0.000427,
+          "bias": -0.00001883
+        }
+      }
+    },
+    "saturn": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.2694,
+          "p99": 0.001673,
+          "median": 0.0004286,
+          "mean": 0.0005237,
+          "bias": 0.000119
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 5.853,
+          "p99": 0.002827,
+          "median": 0.0004576,
+          "mean": 0.000983,
+          "bias": 0.0003104
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19977,
+          "max": 0.002681,
+          "p99": 0.001673,
+          "median": 0.0004286,
+          "mean": 0.0005104,
+          "bias": 0.0001327
+        },
+        "speedArcsecPerDay": {
+          "n": 19977,
+          "max": 0.004244,
+          "p99": 0.002826,
+          "median": 0.0004576,
+          "mean": 0.0006903,
+          "bias": 0.00001744
+        }
+      }
+    },
+    "uranus": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.2062,
+          "p99": 0.00159,
+          "median": 0.0004094,
+          "mean": 0.0005055,
+          "bias": 0.0001797
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 7.385,
+          "p99": 0.001296,
+          "median": 0.0003083,
+          "mean": 0.001156,
+          "bias": 0.0004946
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19888,
+          "max": 0.002595,
+          "p99": 0.001586,
+          "median": 0.0004094,
+          "mean": 0.0004848,
+          "bias": 0.0001824
+        },
+        "speedArcsecPerDay": {
+          "n": 19888,
+          "max": 0.002157,
+          "p99": 0.001264,
+          "median": 0.0003075,
+          "mean": 0.0003664,
+          "bias": 0.000003358
+        }
+      }
+    },
+    "neptune": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.01273,
+          "p99": 0.001615,
+          "median": 0.000401,
+          "mean": 0.000482,
+          "bias": 0.0001434
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 0.5933,
+          "p99": 0.002008,
+          "median": 0.0004479,
+          "mean": 0.0005955,
+          "bias": -0.000005462
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19946,
+          "max": 0.002821,
+          "p99": 0.001611,
+          "median": 0.0004009,
+          "mean": 0.0004808,
+          "bias": 0.0001424
+        },
+        "speedArcsecPerDay": {
+          "n": 19946,
+          "max": 0.003724,
+          "p99": 0.001977,
+          "median": 0.0004476,
+          "mean": 0.0005467,
+          "bias": 0.000005871
+        }
+      }
+    },
+    "pluto": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.04144,
+          "p99": 0.001597,
+          "median": 0.000399,
+          "mean": 0.0004829,
+          "bias": 0.0001583
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 3.226,
+          "p99": 0.01979,
+          "median": 0.002456,
+          "mean": 0.004726,
+          "bias": 0.00003899
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19996,
+          "max": 0.002718,
+          "p99": 0.001596,
+          "median": 0.0003989,
+          "mean": 0.0004808,
+          "bias": 0.0001602
+        },
+        "speedArcsecPerDay": {
+          "n": 19996,
+          "max": 0.02724,
+          "p99": 0.01978,
+          "median": 0.002456,
+          "mean": 0.004566,
+          "bias": 0.0002003
+        }
+      }
+    },
+    "chiron": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.9345,
+          "p99": 0.7959,
+          "median": 0.1132,
+          "mean": 0.1668,
+          "bias": -0.001979
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 3.789,
+          "p99": 0.005983,
+          "median": 0.0009624,
+          "mean": 0.001634,
+          "bias": -0.000267
+        }
+      },
+      "zodiacally-se1 (planets >1 deg from the Sun)": {
+        "longitudeArcsec": {
+          "n": 19986,
+          "max": 0.9345,
+          "p99": 0.7959,
+          "median": 0.1132,
+          "mean": 0.1667,
+          "bias": -0.001915
+        },
+        "speedArcsecPerDay": {
+          "n": 19986,
+          "max": 0.008938,
+          "p99": 0.005974,
+          "median": 0.0009631,
+          "mean": 0.001418,
+          "bias": -0.00004934
+        }
+      }
+    },
+    "trueNode": {
+      "zodiacally-se1": {
+        "longitudeArcsec": {
+          "n": 20000,
+          "max": 0.1783,
+          "p99": 0.0247,
+          "median": 0.003101,
+          "mean": 0.004602,
+          "bias": 0.0001826
+        },
+        "speedArcsecPerDay": {
+          "n": 20000,
+          "max": 1.087,
+          "p99": 0.1315,
+          "median": 0.003342,
+          "mean": 0.009716,
+          "bias": -3.336e-7
+        }
+      }
+    }
+  },
+  "houses": {
+    "asc": {
+      "1900-2049": {
+        "n": 14968,
+        "max": 0.02701,
+        "p99": 0.002558,
+        "median": 0.0003673,
+        "mean": 0.0005104,
+        "bias": 0.0001411
+      },
+      "2050-2099": {
+        "n": 5032,
+        "max": 30.29,
+        "p99": 4.773,
+        "median": 1.722,
+        "mean": 1.873,
+        "bias": 1.873
+      }
+    },
+    "mc": {
+      "1900-2049": {
+        "n": 14968,
+        "max": 0.00227,
+        "p99": 0.001382,
+        "median": 0.000341,
+        "mean": 0.00041,
+        "bias": 0.0001308
+      },
+      "2050-2099": {
+        "n": 5032,
+        "max": 2.082,
+        "p99": 2.076,
+        "median": 1.858,
+        "mean": 1.867,
+        "bias": 1.867
+      }
+    },
+    "cusps": {
+      "1900-2049": {
+        "n": 179616,
+        "max": 0.02701,
+        "p99": 0.001752,
+        "median": 0.0003548,
+        "mean": 0.0004475,
+        "bias": 0.0001326
+      },
+      "2050-2099": {
+        "n": 60384,
+        "max": 30.29,
+        "p99": 3.629,
+        "median": 1.793,
+        "mean": 1.874,
+        "bias": 1.874
+      }
+    }
+  },
+  "houseSamplesSkipped": 0,
+  "display": {
+    "sign": 0,
+    "arcminute": 61,
+    "values": 240000,
+    "note": "positions whose zodiac sign or displayed whole arcminute (floor) differ between the two libraries"
+  }
+}

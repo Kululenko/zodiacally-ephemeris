@@ -1,0 +1,73 @@
+ZODIACALLY EPHEMERIS — LICENCE TERMS
+Version 1, 4 November 2026
+Licensor: the Zodiacally operator identified at https://www.zodiacally.com/legal-notice/
+Contact: support@zodiacally.com
+
+1. Free private use
+You may download, run and adapt the supplied engine for your own private,
+non-commercial use and personal experimentation. This free permission does not
+cover use for a business, client work, paid readings or a public service, even
+if that service is free to its users. Displaying attribution does not turn a
+commercial use into a permitted free use.
+
+2. Commercial licences
+Commercial rights require a separate licence granted by Zodiacally to an
+identified person or organisation. Downloading this package, entering a licence
+tier in software, or displaying a price does not grant commercial rights.
+
+Standard: EUR 500 one-time licence fee, with visible attribution in every
+customer-facing reading produced using the engine.
+White-label: EUR 2,000 one-time licence fee, without the obligation to display
+Zodiacally attribution to the customer.
+
+The agreed licence permits the named licensee to use and adapt the licensed
+version in its own applications and to produce readings for its customers.
+Its staff and agents may use the engine on its behalf under the same terms.
+The licence is perpetual: the right to use that licensed version has no fixed
+expiry date and requires no recurring licence payment. It does not promise
+hosted API access, support, maintenance or future releases. Their provision,
+if any, is agreed separately. Commercial terms and the final invoice are
+confirmed individually before purchase; this download does not initiate a sale.
+
+3. Attribution
+For free private use and the Standard commercial licence, include this line
+visibly in every generated reading, in the reading's language:
+
+EN: Astronomical calculations: Zodiacally Ephemeris, based on JPL DE440
+(NASA/JPL). https://www.zodiacally.com/ephemeris/
+
+DE: Astronomische Berechnung: Zodiacally Ephemeris, auf Basis von JPL DE440
+(NASA/JPL). https://www.zodiacally.com/ephemeris/
+
+For a website or app, a readable line at the end of the reading is sufficient;
+link “Zodiacally Ephemeris” to the URL above where hyperlinks are supported.
+Keep the line in exported PDFs, reports, emails and chat responses. A hidden
+metadata field, internal log, system prompt or general website legal notice
+alone does not satisfy this requirement. Automated agents must pass the
+attribution through to the final customer-facing output. A separately granted
+White-label licence waives this customer-facing Zodiacally attribution only.
+
+4. Distribution and rights notices
+Keep this licence and the supplied source/data notices with copies of the
+engine. A commercial licensee may embed the engine in its own application and
+distribute it as part of that application; it may not resell or sublicense the
+engine as a standalone library or give customers an independent right to use
+the engine. A customer may retain and share their generated reading with its
+required attribution. Ownership of the engine is not transferred.
+The White-label option does not remove third-party notices or source/data
+licence obligations. Zodiacally does not claim exclusive rights to astronomical
+facts or to public-domain source data. See SOURCES.md.
+
+5. Scope and limitations
+The engine calculates astronomical quantities; it does not generate text or
+establish the validity of an astrological interpretation. Its documented date
+coverage, coordinate conventions, numerical differences and time-data limits
+apply. No NASA, JPL or Astrodienst endorsement is implied. Mandatory statutory
+rights remain unaffected. Any rights not expressly granted are reserved.
+
+German summary (the terms above govern the supplied package):
+Privat und nichtkommerziell kostenlos. Gewerblich nur mit gesondert erteilter
+Dauerlizenz: 500 EUR einmalig mit sichtbarer Nennung in jedem Kundenreading;
+2.000 EUR einmalig ohne diese öffentliche Nennungspflicht. Unbefristet ist die
+Nutzung der lizenzierten Version; Hosting, Wartung und künftige Versionen werden
+nicht automatisch zugesagt. Quell- und Rechtehinweise im Paket bleiben erhalten.

@@ -1,0 +1,22 @@
+name: Bug or wrong value
+description: A calculation that looks wrong, an error, or a documentation problem.
+labels: [bug]
+body:
+  - type: textarea
+    id: input
+    attributes:
+      label: Input
+      description: UTC time, latitude/longitude, body or house system. Please use synthetic or public data, not someone's private birth details.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result, and the reference you compared with
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Engine version and Node.js version
+      description: "In the project where the engine is installed: npx --no-install zodiacally-ephemeris --info, or node node_modules/zodiacally-ephemeris/cli.cjs --info. Node.js: node --version."

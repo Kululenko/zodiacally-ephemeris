@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use Zodiacally Ephemeris in research or publications, please cite it as below."
+title: "Zodiacally Ephemeris"
+abstract: >-
+  A table-driven ephemeris for astrological software in pure JavaScript (Node.js): apparent
+  geocentric ecliptic longitudes and speeds of the Sun, Moon, Mercury to Pluto, Chiron and the
+  true lunar node for 1899-2101, built from NASA/JPL DE440s and, for Chiron, the JPL Horizons
+  orbit solution JPL#171, with IAU 2006 sidereal time and Placidus and whole-sign houses.
+  Compared with the Swiss Ephemeris and NASA/JPL Horizons in a reproducible benchmark.
+  Source-available, not open source; see the licence.
+type: software
+authors:
+  - name: "Zodiacally"
+    website: "https://www.zodiacally.com"
+version: "1.1.0"
+date-released: "2026-11-04"
+repository-code: "https://github.com/Kululenko/zodiacally-ephemeris"
+url: "https://www.zodiacally.com/ephemeris/"
+license-url: "https://github.com/Kululenko/zodiacally-ephemeris/blob/main/LICENSE.txt"
+keywords:
+  - ephemeris
+  - astrology
+  - JPL DE440
+  - planetary positions
+  - house systems
+  - JavaScript
+references:
+  - type: article
+    title: "The JPL Planetary and Lunar Ephemerides DE440 and DE441"
+    authors:
+      - family-names: Park
+        given-names: Ryan S.
+      - family-names: Folkner
+        given-names: William M.
+      - family-names: Williams
+        given-names: James G.
+      - family-names: Boggs
+        given-names: Dale H.
+    journal: "The Astronomical Journal"
+    volume: 161
+    start: 105
+    year: 2021
+    doi: "10.3847/1538-3881/abd414"

@@ -1,0 +1,10 @@
+A) planetary deflection at Uranus-Jupiter appulses (residual ours - oracle, mas)
+  JD 2435238.36 sep  56.3"  Sun only            rms 0.143 (scatter around mean)  max 1.009
+  JD 2435238.36 sep  56.3"  Sun+Jupiter+Saturn  rms 0.669 (scatter around mean)  max 2.535
+  JD 2465513.41 sep  76.4"  Sun only            rms 0.202 (scatter around mean)  max 0.935
+  JD 2465513.41 sep  76.4"  Sun+Jupiter+Saturn  rms 0.982 (scatter around mean)  max 1.873
+B) Sun deflection for rays behind the solar disc (residual ours - oracle, arcsec)
+  mercury  JD 2431039.00 min elongation 0.017 deg: point rms 0.8144 max 4.5456  polytrope rms 0.0501 max 0.1990  none rms 0.6802 max 1.4071
+  mercury  JD 2434871.46 min elongation 0.001 deg: point rms 14.5713 max 146.3328  polytrope rms 0.0317 max 0.1630  none rms 0.3824 max 1.0428
+  jupiter  JD 2465239.07 min elongation 0.051 deg: point rms 0.3560 max 1.3964  polytrope rms 0.0445 max 0.1783  none rms 1.4566 max 2.8569
+  jupiter  JD 2469626.91 min elongation 0.036 deg: point rms 0.7022 max 3.0211  polytrope rms 0.0756 max 0.3079  none rms 1.5690 max 3.2445

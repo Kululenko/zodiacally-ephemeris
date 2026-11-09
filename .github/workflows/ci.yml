@@ -1,0 +1,48 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    name: Tests (Node ${{ matrix.node }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm test
+  compare:
+    name: Compare with Swiss Ephemeris and JPL Horizons
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+        working-directory: benchmark
+      - run: node fetch-swiss-data.mjs
+        working-directory: benchmark
+      - run: node agreement.mjs --out-dir ci-results
+        working-directory: benchmark
+      - run: node horizons.mjs --out-dir ci-results
+        working-directory: benchmark
+      - run: node speed.mjs --out-dir ci-results --rounds 5
+        working-directory: benchmark
+      - run: node summary.mjs --dir ci-results && cat ci-results/README.md >> "$GITHUB_STEP_SUMMARY"
+        working-directory: benchmark
+      - uses: actions/upload-artifact@v4
+        with:
+          name: comparison-results
+          path: benchmark/ci-results/
